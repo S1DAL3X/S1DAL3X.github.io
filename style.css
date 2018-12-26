@@ -5,6 +5,12 @@
 html, body{
 	height: 100%;
 }
+body{
+	background-image: url("https://vybratpravilno.ru/wp-content/uploads/2017/10/94768e0329cc81bb8bef4689ea3ba8a60fb3.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
 
 .welcome-page{
 	height: 100%;
