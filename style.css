@@ -34,6 +34,9 @@ body{
 	font-family: 'Major Mono Display', monospace;
 	font-size: 35px;
 	color: #efeff0;
+	background: linear-gradient(135deg, #12BCB0 20%, #FABE0E 70%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
 }
 .menu{
 	width: 900px;
