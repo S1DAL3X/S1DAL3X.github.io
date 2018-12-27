@@ -6,7 +6,7 @@ html, body{
 	height: 100%;
 }
 body{
-	background-image: url("https://images.wallpaperscraft.ru/image/elochnaya_igrushka_shar_el_novyj_god_rozhdestvo_118884_1920x1080.jpg");
+	background-image: url("https://wallbox.ru/wallpapers/main/201252/prazdnik-novyy-god-rozhdestvo-9aa5b42.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-opacity: 0.5;
@@ -23,7 +23,7 @@ body{
 .welcome-page{
 	height: 100%;
 	width: 100%;
-	
+
 }
 
 .header{
@@ -55,16 +55,25 @@ body{
 .content{
 	width: 100%;
 }
-.welcome-text-1{
+.welcome-text-1, .welcome-text-2, .welcome-text-3, .welcome-text-4{
 	display: none;
-	margin-top: 100px;
+	margin-top: 90px;
 	width: 100%;
 	text-align: center;
 	font-size: 95px;
 	color: white;
 	font-family: 'Josefin Sans', sans-serif;
 }
-.welcome-text-2{
+.welcome-text-end{
+	display: none;
+	margin-top: 100px;
+	width: 100%;
+	text-align: center;
+	font-size: 95px;
+	color: white;
+	font-family: 'Major Mono Display', monospace;
+}
+.welcome-text-par{
 	display: none;
 	width: 100%;
 	text-align: center;
@@ -72,6 +81,21 @@ body{
 	color: white;
     font-family: 'Montserrat', sans-serif;
 }
+.welcome-text-par-2{
+	display: none;
+	width: 100%;
+	text-align: center;
+	font-size: 15px;
+	color: white;
+	margin-top: 10px;
+    font-family: 'Montserrat', sans-serif;
+}
+.emodji{
+	margin-top: 5px;
+	height: 25px;
+	width: 25px;
+}
+
 
 @media (max-width: 750px){
 	.header{
