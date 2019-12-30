@@ -110,7 +110,9 @@ body{
     }
 }
 @media (max-width: 1080px){
-    .seconds{visibility:hidden;}
+    .seconds{
+       visibility: hidden;
+    }
 }
 @media (max-width: 1040px){
     .seconds{
@@ -172,7 +174,7 @@ body{
     }
 }
 @media (max-width: 320px){
-    .seconds{visibility:hidden;}
+    /*.seconds{visibility:hidden;}*/
     .days,.hours,.minutes,.seconds{
         margin-left: 17%;
         margin-right: 0;
