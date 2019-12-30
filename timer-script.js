@@ -11,16 +11,14 @@ let timerr = setInterval(function() {
   const diff = new Date(2020, 0, 1) - today;
 
   // math
-  let days = Math.floor(diff / (1000 * 60 * 60 * 24));
-  let hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  //let days = Math.floor(diff / (1000 * 60 * 60 * 24));
+  let hours = Math.floor((diff % (1000 * 60 * 60 * 24 * 24)) / (1000 * 60 * 60));
   let minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
   let seconds = Math.floor((diff % (1000 * 60)) / 1000);
 
   // display
   document.getElementById("timer-2").innerHTML =
-    "<div class=\"days\"> \
-  <div class=\"numbers\">" + days + "</div>дней</div> \
-<div class=\"hours\"> \
+    "<div class=\"hours\"> \
   <div class=\"numbers\">" + hours + "</div>часов</div> \
 <div class=\"minutes\"> \
   <div class=\"numbers\">" + minutes + "</div>минут</div> \
