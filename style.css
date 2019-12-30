@@ -1,0 +1,176 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+html, body{
+	height: 100%;
+}
+body{
+	background-image: url("https://homedecorideas.uk/wp-content/uploads/2019/10/new-years-2020-desktop-wallpaper-1.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-opacity: 0.5;
+}
+
+.mask {
+    background-color:rgba(0,0,0,.3);
+    height:100%;
+    position:fixed;
+    width:100%;
+    top:0;
+    left:0;
+}
+.welcome-page{
+	height: 100%;
+	width: 100%;
+
+}
+
+.header{
+	display: flex;
+	padding: 30px 150px;
+}
+.year{
+    text-align: center;
+    width: 100%;
+	font-family: 'Major Mono Display', monospace;
+	font-size: 35px;
+	color: #efeff0;
+	background: linear-gradient(135deg, #12BCB0 20%, #FABE0E 70%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+.menu{
+	width: 900px;
+	display: flex;
+	justify-content: flex-end;
+	font-family: 'Thasadith', sans-serif;
+	font-size: 16px;
+}
+.menu a{
+	text-decoration: none;
+	color: white;
+	font-weight: bold;
+	margin: 10px;
+}
+.menu a:hover{
+	color: #c78703;
+	transition: 0.2s;
+}
+.content{
+	width: 100%;
+}
+.welcome-text-1, .welcome-text-2, .welcome-text-3, .welcome-text-4{
+	display: none;
+	margin-top: 90px;
+	width: 100%;
+	text-align: center;
+	font-size: 95px;
+	color: white;
+	font-family: 'Josefin Sans', sans-serif;
+}
+.welcome-text-end{
+	display: none;
+	margin-top: 100px;
+	width: 100%;
+	text-align: center;
+	font-size: 95px;
+	color: white;
+	font-family: 'Major Mono Display', monospace;
+}
+.welcome-text-par{
+	display: none;
+	width: 100%;
+	text-align: center;
+	font-size: 20px;
+	color: white;
+    font-family: 'Montserrat', sans-serif;
+}
+.welcome-text-par-2{
+	display: visible;
+	width: 100%;
+	text-align: center;
+	font-size: 15px;
+	color: white;
+    font-family: 'Montserrat', sans-serif;
+}
+.emodji{
+	margin-top: 5px;
+	height: 25px;
+	width: 25px;
+}
+
+@media (max-width: 1920px){
+    .days,.hours,.minutes,.seconds{
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .red{
+        visibility: hidden;
+    }
+}
+@media (max-width: 769px){
+    .red{
+       visibility: visible;
+       left: 51%;
+    }
+}
+@media (max-width: 750px){
+	.header{
+		display: block;
+	}
+	.name{
+		width: 100%;
+		text-align: center;
+	}
+	.menu{
+		width: 100%;
+		text-align: center;
+		display: block;
+		margin-top: 15px;
+    }
+    .days,.hours,.minutes,.seconds{
+        margin-left: 25%;
+        margin-right: 0;
+    }
+    .red{
+        left: 43%;
+    }
+}
+@media (max-width: 495px){
+	.header{
+		width: 100%;
+		padding: 0px;
+		padding-top: 30px;
+    }
+    .days,.hours,.minutes,.seconds{
+        margin-left: 23.5%;
+        margin-right: 0;
+    }
+}
+@media (max-width: 375px){
+    .days,.hours,.minutes,.seconds{
+        margin-left: 21%;
+        margin-right: 0;
+    }
+}
+@media (max-width: 360px){
+    .days,.hours,.minutes,.seconds{
+        margin-left: 21%;
+        margin-right: 0;
+    }
+    .red{
+        left: 41%;
+    }
+}
+@media (max-width: 320px){
+    .seconds{visibility:hidden;}
+    .days,.hours,.minutes,.seconds{
+        margin-left: 17%;
+        margin-right: 0;
+    }
+    .welcome-text-par-2{
+        width: 100%;
+        margin-top: -120px;
+    }
+}
