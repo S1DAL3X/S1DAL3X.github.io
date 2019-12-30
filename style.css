@@ -112,7 +112,7 @@ body{
 @media (max-width: 1080px){
     .seconds{visibility:hidden;}
 }
-@media (max-width: 1079px){
+@media (max-width: 1040px){
     .seconds{
        visibility: visible;
     }
