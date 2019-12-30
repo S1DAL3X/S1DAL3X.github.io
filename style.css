@@ -109,6 +109,12 @@ body{
         visibility: hidden;
     }
 }
+@media (max-width: 1080px){
+    .seconds{visibility:hidden;}
+}
+@media (max-width: 1079px){
+    .seconds{visibility:visible;}
+}
 @media (max-width: 769px){
     .red{
        visibility: visible;
