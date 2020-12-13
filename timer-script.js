@@ -19,9 +19,9 @@ let timerr = setInterval(function() {
   // display
   document.getElementById("timer-2").innerHTML =
     "<span class=\"hours\"> \
-  <span class=\"numbers\">" + hours + "</span> часов</span> \
+  <span class=\"numbers\">" + hours + "</span> часов<br></span> \
 <span class=\"minutes\"> \
-  <span class=\"numbers\">" + minutes + "</span> минут</span> \
+  <span class=\"numbers\">" + minutes + "</span> минут<br></span> \
 <span class=\"seconds\"> \
   <span class=\"numbers\">" + seconds + "</span> секунд</span> \
 </div>";
