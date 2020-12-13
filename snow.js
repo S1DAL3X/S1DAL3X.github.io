@@ -1,6 +1,6 @@
 
 $( document ).ready(function() {
-    $(".title-second").fadeIn(4000);
+    $(".title-second").fadeIn(4700);
 });
 var snowmax=105
 
