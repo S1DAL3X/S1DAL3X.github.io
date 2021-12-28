@@ -35,7 +35,7 @@ hr{
   font-size: 13px;
   font-family: 'Poiret One', cursive;
   color: #fff;
-  position : fixed;
+  position : absolute;
   height : 13px;
   bottom : 20px;
 }
