@@ -29,7 +29,16 @@ hr{
   color: #fff;
   display: none;
 }
-
+.footer{
+  width: 100%;
+  text-align: center;
+  font-size: 13px;
+  font-family: 'Poiret One', cursive;
+  color: #fff;
+  position : fixed;
+  height : 13px;
+  bottom : 20px;
+}
 
 @media (max-width: 1391px) {
   body{
