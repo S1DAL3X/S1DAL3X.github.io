@@ -30,7 +30,7 @@
     <script>
       $(document).ready(function() {
         $("body").jSnow({
-          vSize: window.innerHeight - 100, // Размер области
+          vSize: document.documentElement.scrollHeight - 100, // Размер области
           flakes: 100, // Количество снежинок
           flakeColor: ["#fff"], // Цвет
           flakeMinSize: 9, // Минимальный размер снежинки
