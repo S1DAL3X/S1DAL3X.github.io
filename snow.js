@@ -49,11 +49,11 @@ function randommaker(range) {
 
 function initsnow() {
         if (ie5 || opera) {
-                marginbottom = document.body.scrollHeight*2
+                marginbottom = document.body.scrollHeight*1
                 marginright = document.body.clientWidth-15
         }
         else if (ns6) {
-                marginbottom = document.body.scrollHeight*2
+                marginbottom = document.body.scrollHeight*1
                 marginright = window.innerWidth-15
         }
         var snowsizerange=snowmaxsize-snowminsize
