@@ -17,7 +17,7 @@ var snowletter="*"
 var sinkspeed=0.6
 
 // Set the maximum-size of your snowflakes
-var snowmaxsize=35
+var snowmaxsize=20
 
 // Set the minimal-size of your snowflakes
 var snowminsize=8
@@ -49,11 +49,11 @@ function randommaker(range) {
 
 function initsnow() {
         if (ie5 || opera) {
-                marginbottom = document.body.scrollHeight*1
+                marginbottom = document.body.scrollHeight*1.5
                 marginright = document.body.clientWidth-15
         }
         else if (ns6) {
-                marginbottom = document.body.scrollHeight*1
+                marginbottom = document.body.scrollHeight*1.5
                 marginright = window.innerWidth-15
         }
         var snowsizerange=snowmaxsize-snowminsize
