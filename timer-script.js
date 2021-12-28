@@ -8,7 +8,7 @@ let timerr = setInterval(function() {
   const today = new Date().getTime();
 
   // get the difference
-  const diff = new Date(2021, 0, 1) - today;
+  const diff = new Date(2022, 0, 01) - today;
 
   // math
   //let days = Math.floor(diff / (1000 * 60 * 60 * 24));
