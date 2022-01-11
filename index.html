@@ -1,59 +1,828 @@
-<!doctype html>
-<html lang="ru">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
-    <!-- <link rel="stylesheet" href="timer.css"> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
-    <script src="https://code.jquery.com/jquery-1.4.2.min.js"></script>
-    <title>2022 Come...</title>
-  </head>
-  <body>
-      <div class="title-main">
-        Ждём чуда...
-      </div>
-      <hr>
-      <div class="title-second">
-        &#x2022 2022 &#x2022 <span class="br-span"><br></span><span id="timer-2"></span>
-      </div>
-      <div class="footer">Made by S1DAL3X</div>
-    <!-- Optional JavaScript -->
-    <!-- Popper.js first, then Bootstrap JS -->
-    <style>
-      html,body {overflow:hidden}
-    </style>
-    <script>
-      document.onmousewheel = document.onwheel = function() {
-        return false;
-      };
-      document.addEventListener ("MozMousePixelScroll",
-        function() { return false }, false);
-      document.onkeydown = function(e) {
-        if (e.keyCode >= 33 && e.keyCode <= 40) return false;
-      }
-    </script>
-    <script src="timer-script.js" charset="utf-8"></script>
-    <script src="snow.js" charset="utf-8"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
-    <script>
-      $(document).ready(function() {
-        $("body").jSnow({
-          vSize: document.documentElement.scrollHeight - 100, // Размер области
-          flakes: 100, // Количество снежинок
-          flakeColor: ["#fff"], // Цвет
-          flakeMinSize: 9, // Минимальный размер снежинки
-          flakeMaxSize: 9, // Максимальный размер снежинки
-          fallingSpeedMin: 1, // Минимальная скорость снежинки
-          fallingSpeedMax: 1, // Максимальная скорость снежинки
-          flakeCode:["*"] // Вид снежинки
-        });
-        $(".title-second").fadeIn(4700);
-      });
-    </script>
-  </body>
+    <link href="https://fonts.googleapis.com/css?family=Kaushan+Script|Montserrat:300i,400,700&amp;subset=cyrillic-ext" rel="stylesheet">    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <title>Mogo</title>
+</head>
+<body>
+
+<header class="header" id="header">
+    <div class="container">
+        <div class="header_inner">
+           <div class="header_logo" data-scroll="#intro"><b>MoGo</b></div> 
+            <nav class="nav" id="nav">
+                <a class="nav_link" href="#" data-scroll="#about">About</a>
+                <a class="nav_link" href="#" data-scroll="#services">Service</a>
+                <a class="nav_link" href="#" data-scroll="#blog">Blog</a>
+                <a class="nav_link" href="#"data-scroll="#works">Work</a>
+                <a class="nav_link" href="#"data-scroll="#footer">Contact</a>
+                <a class="nav_link" href="#">
+                    <i class="fas fa-shopping-cart"></i>
+                </a>
+                <a class="nav_link" href="#">
+                    <i class="fas fa-search"></i>
+                </a>
+            </nav>
+            <button class="nav-toggle" id="nav_toggle" type="button">
+                <span class="nav-toggle_item">Menu</span>
+            </button>
+        </div>
+    </div>
+</header>
+
+<div class="page">
+    <!-- Intro -->
+    <div class="intro" id="intro">
+        <div class="container">
+            <div class="intro_inner">
+                <h2 class="intro_suptitle">Creative Template</h2>
+                <h1 class="intro_title">Welcome to MoGo</h1>
+            
+                <a class="btn" href="#">Learn More</a>
+            </div>
+
+        </div>
+
+        <div class="slider">
+            <div class="container">
+                <div class="slider_inner">
+                    <div class="slider_item active">
+                        <span class="slider_num">01</span> 
+                        <span class="slider_text">Intro</span>
+                    </div>
+                    <div class="slider_item">
+                        <span class="slider_num">02</span> 
+                        <span class="slider_text">Work</span>
+                    </div>
+                    <div class="slider_item">
+                        <span class="slider_num">03</span> 
+                        <span class="slider_text">About</span>
+                    </div>
+                    <div class="slider_item">
+                        <span class="slider_num">04</span> 
+                        <span class="slider_text">Contacts</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- About -->
+    <section class="section" id="about">
+        <div class="container">
+            <div class="section_header">
+                <h3 class="section_suptitle">What we do</h3>
+                <h2 class="section_title">Story about us</h2>
+                <div class="section_text">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                     Ullam ab nostrum laudantium quo facere, eos quos.
+                     Quas repellat cumque, commodi placeat ad est, sunt, 
+                     sapiente magni itaque voluptate dolores molestias?</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card_item">
+                    <div class="card_inner">
+                    <div class="card_img">
+                        <img src="assets/images/about/1.jpg">
+                    </div>
+                    <div class="card_text">
+                        Super team
+                    </div>
+                </div>
+                </div>
+                <div class="card_item">
+                    <div class="card_inner">
+                    <div class="card_img">
+                        <img src="assets/images/about/2.jpg">
+                    </div>
+                    <div class="card_text">
+                        Super team
+                    </div>
+                </div>
+                </div>
+                <div class="card_item">
+                    <div class="card_inner">
+                    <div class="card_img">
+                        <img src="assets/images/about/3.jpg">
+                    </div>
+                    <div class="card_text">
+                        Super team
+                    </div>
+                </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Statisctics -->
+    <div class="statistics">
+    <div class="container">
+        <div class="stat">
+            <div class="stat_item">
+                <div class="stat_count">42</div>
+                <div class="stat_text">Web design products</div>
+            </div>
+            <div class="stat_item">
+                <div class="stat_count">123</div>
+                <div class="stat_text">Happy clients</div>
+            </div>
+            <div class="stat_item">
+                <div class="stat_count">15</div>
+                <div class="stat_text">award winner</div>
+            </div>
+            <div class="stat_item">
+                <div class="stat_count">99</div>
+                <div class="stat_text">Cup of coffee</div>
+            </div>
+            <div class="stat_item">
+                <div class="stat_count">24</div>
+                <div class="stat_text">Members</div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <!-- Services -->
+<section class="section" id="services">
+    <div class="container">
+        <div class="section_header">
+            <h3 class="section_suptitle">We work with</h3>
+            <h2 class="section_title">Amazing services</h2>
+        </div>
+
+        <div class="services">
+            <div class="services_item services_item--border">
+                <img class="services_icon" src="assets/images/services/photography.png" alt="">
+                <div class="services-title">Photography</div>
+                <div class="services_text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut enim labore earum? At, quia modi expedita et assumenda dignissimos impedit </div>
+            </div>
+            <div class="services_item services_item--border">
+                <img class="services_icon" src="assets/images/services/webdesign.png" alt="">
+                <div class="services-title">Web Design</div>
+                <div class="services_text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut enim labore earum? At, quia modi expedita et assumenda dignissimos impedit </div>
+            </div>
+            <div class="services_item services_item--border">
+                <img class="services_icon" src="assets/images/services/creativity.png" alt="">
+                <div class="services-title">Creativity</div>
+                <div class="services_text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut enim labore earum? At, quia modi expedita et assumenda dignissimos impedit </div>
+            </div>
+            <div class="services_item">
+                <img class="services_icon" src="assets/images/services/seo.png" alt="">
+                <div class="services-title">Seo</div>
+                <div class="services_text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut enim labore earum? At, quia modi expedita et assumenda dignissimos impedit </div>
+            </div>
+            <div class="services_item">
+                <img class="services_icon" src="assets/images/services/css-html.png" alt="">
+                <div class="services-title">Css/Html</div>
+                <div class="services_text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut enim labore earum? At, quia modi expedita et assumenda dignissimos impedit </div>
+            </div>
+            <div class="services_item">
+                <img class="services_icon" src="assets/images/services/digital.png" alt="">
+                <div class="services-title">Digital</div>
+                <div class="services_text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut enim labore earum? At, quia modi expedita et assumenda dignissimos impedit </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Devices -->
+<section class="section section--devices">
+    <div class="container">
+        <div class="section_header">
+            <h3 class="section_suptitle">For all devices</h3>
+            <h2 class="section_title">Unique design</h2>
+        </div>
+
+        <div class="devices">
+            <img class="devices_item" src="assets/images/ipad.png">
+            <img class="devices_item devices_item--iphone" src="assets/images/iphone.png">
+        </div>
+    </div>
+</section>
+
+    <!-- Wedo -->
+<section class="section">
+    <div class="container">
+        <div class="section_header">
+            <h3 class="section_suptitle">Service</h3>
+            <h2 class="section_title">What we do</h2>
+            <div class="section_text">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                 Ullam ab nostrum laudantium quo facere, eos quos.
+                 Quas repellat cumque, commodi placeat ad est, sunt, 
+                 sapiente magni itaque voluptate dolores molestias?</p>
+            </div>
+        </div>
+
+        <div class="wedo">
+            <div class="wedo_item">
+                <img class="wedo_img" src="assets/images/wedo.jpg">
+            </div>
+
+            <div class="wedo_item">
+                <div class="accordion">
+                    <div class="accordion_item" data-collapse="#wedo_1">
+                        <div class="accordion_header">
+                            <img class="accordion_icon" src="assets/images/services/photography.png">
+                            <div class="a
+                            ccordion_title">Photography</div>
+                        </div>
+                        <div class="accordion_content" id="wedo_1">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor qui deleniti beatae soluta repellendus saepe quae maxime non aut, molestiae nam nesciunt placeat eveniet eum reprehenderit commodi sequi earum eaque!</p>
+                        </div>
+                    </div>
+
+                    <div class="accordion_item active" data-collapse="#wedo_2">
+                        <div class="accordion_header">
+                            <img class="accordion_icon" src="assets/images/services/creativity.png">
+                            <div class="accordion_title">Creativity</div>
+                        </div>
+                        <div class="accordion_content" id="wedo_2">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor qui deleniti beatae soluta repellendus saepe quae maxime non aut, molestiae nam nesciunt placeat eveniet eum reprehenderit commodi sequi earum eaque!</p>
+                        </div>
+                    </div>
+
+                    <div class="accordion_item" data-collapse="#wedo_3">
+                        <div class="accordion_header">
+                            <img class="accordion_icon" src="assets/images/services/webdesign.png">
+                            <div class="accordion_title">Web Design</div>
+                        </div>
+                        <div class="accordion_content" id="wedo_3">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor qui deleniti beatae soluta repellendus saepe quae maxime non aut, molestiae nam nesciunt placeat eveniet eum reprehenderit commodi sequi earum eaque!</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+</section>
+
+    <!-- Reviews 1 -->
+<div class="section section--gray">
+    <div class="container">
+        <div class="reviews">
+
+            
+            <div data-slider>
+                <div>
+                    <div class="reviews_item">
+                        <img class="reviews_photo" src="assets/images/avatar.png">
+                        <div class="reviews_text">
+                            "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis vitae deleniti tempora possimus sapiente officia sed? Natus molestias magni, enim"
+                        </div>
+                        <div class="reviews_author">John Doe</div>
+                    </div>
+                </div>
+                <div>
+                    <div class="reviews_item">
+                        <img class="reviews_photo" src="assets/images/avatar.png">
+                        <div class="reviews_text">
+                            "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis vitae deleniti tempora possimus sapiente officia sed? Natus molestias magni, enim"
+                        </div>
+                        <div class="reviews_author">John Doe</div>
+                    </div>
+                </div>
+                <div>
+                    <div class="reviews_item">
+                        <img class="reviews_photo" src="assets/images/avatar.png">
+                        <div class="reviews_text">
+                            "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis vitae deleniti tempora possimus sapiente officia sed? Natus molestias magni, enim"
+                        </div>
+                        <div class="reviews_author">John Doe</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!-- Team -->
+<section class="section">
+    <div class="container">
+        <div class="section_header">
+            <h3 class="section_suptitle">Who we are</h3>
+            <h2 class="section_title">Meet our team</h2>
+            <div class="section_text">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                 Ullam ab nostrum laudantium quo facere, eos quos.
+                 Quas repellat cumque, commodi placeat ad est, sunt, 
+                 sapiente magni itaque voluptate dolores molestias?</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card_item">
+                <div class="card_inner">
+                    <div class="card_img">
+                        <img src="assets/images/team/1.jpg">
+                    </div>
+                    <div class="card_text">
+                        <div class="social">
+                            <a class="social_item" href="#">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a class="social_item" href="#">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a class="social_item" href="#">
+                                <i class="fab fa-pinterest-p"></i>
+                            </a>
+                            <a class="social_item" href="#">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card_info">
+                    <div class="card_name">Matthew Dix</div>
+                    <div class="card_prof">Graphic Design</div>
+                </div>
+            </div>
+
+            <div class="card_item">
+                <div class="card_inner">
+                <div class="card_img">
+                    <img src="assets/images/team/2.jpg">
+                </div>
+                <div class="card_text">
+                    <div class="social">
+                        <a class="social_item" href="#">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a class="social_item" href="#">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a class="social_item" href="#">
+                            <i class="fab fa-pinterest-p"></i>
+                        </a>
+                        <a class="social_item" href="#">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="card_info">
+                <div class="card_name">Cristopher Campell</div>
+                <div class="card_prof">Brand UX design</div>
+            </div>
+            </div>
+
+            <div class="card_item">
+                <div class="card_inner">
+                <div class="card_img">
+                    <img src="assets/images/team/3.jpg">
+                </div>
+                <div class="card_text">
+                    <div class="social">
+                        <a class="social_item" href="#">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a class="social_item" href="#">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a class="social_item" href="#">
+                            <i class="fab fa-pinterest-p"></i>
+                        </a>
+                        <a class="social_item" href="#">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="card_info">
+                <div class="card_name">Michael Fertig</div>
+                <div class="card_prof">Developer</div>
+            </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+    <!-- Logos -->
+<div class="section section--gray">
+    <div class="container">
+        <div class="logos">
+            <div class="logos_item">
+                <img class="logos_img" src="assets/images/logos/1.png" alt="">
+            </div>
+            <div class="logos_item">
+                <img class="logos_img" src="assets/images/logos/2.png" alt="">
+            </div>
+            <div class="logos_item">
+                <img class="logos_img" src="assets/images/logos/3.png" alt="">
+            </div>
+            <div class="logos_item">
+                <img class="logos_img" src="assets/images/logos/4.png" alt="">
+            </div>
+            <div class="logos_item">
+                <img class="logos_img" src="assets/images/logos/5.png" alt="">
+            </div>
+            <div class="logos_item">
+                <img class="logos_img" src="assets/images/logos/6.png" alt="">
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!-- Works -->
+<section class="section" id="works">
+    <div class="container">
+
+        <div class="section_header">
+            <h3 class="section_suptitle">What we do</h3>
+            <h2 class="section_title">Some of our work</h2>
+            <div class="section_text">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                 Ullam ab nostrum laudantium quo facere, eos quos.
+                 Quas repellat cumque, commodi placeat ad est, sunt, 
+                 sapiente magni itaque voluptate dolores molestias?</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="works">
+        <div class="works_col">
+            <div class="works_item">
+                <img class="works_image" src="assets/images/works/1.jpg" alt="">
+                <div class="works_info">
+                    <div class="works_title">Creativity designed</div>
+                    <div class="works_text">Lorem ipsum dolor sit</div>
+                </div>
+            </div>
+            <div class="works_item">
+                <img class="works_image" src="assets/images/works/2.jpg" alt="">
+                <div class="works_info">
+                    <div class="works_title">Creativity designed</div>
+                    <div class="works_text">Lorem ipsum dolor sit</div>
+                </div>
+            </div>
+        </div>
+        <div class="works_col">
+            <div class="works_item">
+                <img class="works_image" src="assets/images/works/3.jpg" alt="">
+                <div class="works_info">
+                    <div class="works_title">Creativity designed</div>
+                    <div class="works_text">Lorem ipsum dolor sit</div>
+                </div>
+            </div>
+            <div class="works_item">
+                <img class="works_image" src="assets/images/works/4.jpg" alt="">
+                <div class="works_info">
+                    <div class="works_title">Creativity designed</div>
+                    <div class="works_text">Lorem ipsum dolor sit</div>
+                </div>
+            </div>
+        </div>
+        <div class="works_col">
+            <div class="works_item">
+                <img class="works_image" src="assets/images/works/5.jpg" alt="">
+                <div class="works_info">
+                    <div class="works_title">Creativity designed</div>
+                    <div class="works_text">Lorem ipsum dolor sit</div>
+                </div>
+            </div>
+        </div>
+        <div class="works_col">
+            <div class="works_item">
+                <img class="works_image" src="assets/images/works/6.jpg" alt="">
+                <div class="works_info">
+                    <div class="works_title">Creativity designed</div>
+                    <div class="works_text">Lorem ipsum dolor sit</div>
+                </div>
+            </div>
+            <div class="works_item">
+                <img class="works_image" src="assets/images/works/7.jpg" alt="">
+                <div class="works_info">
+                    <div class="works_title">Creativity designed</div>
+                    <div class="works_text">Lorem ipsum dolor sit</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+    <!-- Reviews 2 -->
+<div class="section">
+    <div class="container">
+        <div class="reviews">
+
+            <div data-slider>
+                <div>
+                    <div class="reviews_item">
+                        <img class="reviews_photo" src="assets/images/avatar.png">
+                        <div class="reviews_text">
+                            "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis vitae deleniti tempora possimus sapiente officia sed? Natus molestias magni, enim"
+                        </div>
+                        <div class="reviews_author">John Doe</div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="reviews_item">
+                        <img class="reviews_photo" src="assets/images/avatar.png">
+                        <div class="reviews_text">
+                            "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis vitae deleniti tempora possimus sapiente officia sed? Natus molestias magni, enim"
+                        </div>
+                        <div class="reviews_author">John Doe</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!-- Clients -->
+<section class="section section--clients">
+    <div class="container">
+        <div class="section_header">
+            <h3 class="section_suptitle">Happy Clients</h3>
+            <h2 class="section_title">What people say</h2>
+        </div>
+
+        <div class="clients">
+            <div class="clients_item">
+                <img class="clients_photo" src="assets/images/clients/1.png" alt="">
+                <div class="clients_content">
+                    <div class="clients_name">Matthew Dix</div>
+                    <div class="clients_prof">Graphic Design</div>
+                    <div class="clients_text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+                </div>
+            </div>
+            <div class="clients_item">
+                <img class="clients_photo" src="assets/images/clients/2.png" alt="">
+                <div class="clients_content">
+                    <div class="clients_name">Nick karvonius</div>
+                    <div class="clients_prof">Graphic Design</div>
+                    <div class="clients_text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+                </div>
+            </div>
+            <div class="clients_item">
+                <img class="clients_photo" src="assets/images/clients/3.png" alt="">
+                <div class="clients_content">
+                    <div class="clients_name">Javelin Castillo</div>
+                    <div class="clients_prof">Graphic Design</div>
+                    <div class="clients_text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+                </div>
+            </div>
+            <div class="clients_item">
+                <img class="clients_photo" src="assets/images/clients/4.png" alt="">
+                <div class="clients_content">
+                    <div class="clients_name">Mike Petrucci</div>
+                    <div class="clients_prof">Graphic Design</div>
+                    <div class="clients_text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+    <!-- Blog -->
+<section class="section" id="blog">
+    <div class="container">
+
+        <div class="section_header">
+            <h3 class="section_suptitle">Our stories</h3>
+            <h2 class="section_title">Latest blog</h2>
+        </div>
+
+        <div class="blog">
+            <div class="blog_item">
+                <div class="blog_header">
+                    <a href="#">
+                        <img class="blog_photo" src="assets/images/blog/1.jpg" alt="">
+                    </a>
+                    <div class="blog_date">
+                        <div class="blog_date-day">15</div>Jan
+                    </div>
+                </div>
+                <div class="blog_content">
+                    <div class="blog_title">
+                        <a href="#">Lorem ipsum dolor sit amlet</a>
+                    </div>
+                    <div class="blog_text">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    </div>
+                </div>
+                <div class="blog_footer">
+                    <div class="blog_stat">
+                        <span class="blog-stat_item">
+                            <i class="far fa-eye"></i> 542
+                        </span>
+                        <span class="blog-stat_item">
+                            <i class="far fa-comment-dots"></i> 17
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="blog_item">
+                <div class="blog_header">
+                    <a href="#">
+                        <img class="blog_photo" src="assets/images/blog/2.jpg" alt="">
+                    </a>
+                    <div class="blog_date">
+                        <div class="blog_date-day">15</div>Jan
+                    </div>
+                </div>
+                <div class="blog_content">
+                    <div class="blog_title">
+                        <a href="#">Lorem ipsum dolor sit amlet</a>
+                    </div>
+                    <div class="blog_text">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    </div>
+                </div>
+                <div class="blog_footer">
+                    <div class="blog_stat">
+                        <span class="blog-stat_item">
+                            <i class="far fa-eye"></i> 542
+                        </span>
+                        <span class="blog-stat_item">
+                            <i class="far fa-comment-dots"></i> 17
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="blog_item">
+                <div class="blog_header">
+                    <a href="#">
+                        <img class="blog_photo" src="assets/images/blog/3.jpg" alt="">
+                    </a>
+                    <div class="blog_date">
+                        <div class="blog_date-day">15</div>Jan
+                    </div>
+                </div>
+                <div class="blog_content">
+                    <div class="blog_title">
+                        <a href="#">Lorem ipsum dolor sit amlet</a>
+                    </div>
+                    <div class="blog_text">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    </div>
+                </div>
+                <div class="blog_footer">
+                    <div class="blog_stat">
+                        <span class="blog-stat_item">
+                            <i class="far fa-eye"></i> 542
+                        </span>
+                        <span class="blog-stat_item">
+                            <i class="far fa-comment-dots"></i> 17
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+    <!-- Map -->
+<section class="section section--map">
+    <div class="container">
+        <div class="map">
+            <h2 class="map_title">
+                <div><i class="fas fa-map-marker-alt"></i></div>
+                <a href="#" target="_blank">Open Map</a>
+            </h2>
+        </div>
+    </div>
+</section>
+
+    <!-- Footer -->
+<footer class="footer" id="footer">
+    <div class="container">
+        
+        <div class="footer_inner">
+
+            <div class="footer_col footer_col--first">
+
+                <div class="footer_logo">MoGo</div>
+                <div class="footer_text">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+                    Iure, nemo eaque commodi magni asperiores sit provident veritatis 
+                    earum molestiae consequuntur, non ab ut vero, 
+                    numquam illum architecto excepturi velit voluptatum?
+                </div>
+                <div class="footer_social">
+                    <div class="footer_social-header">
+                        <b>15k</b> followers
+                    </div>
+                    <div class="footer_social-content">
+                        Follow Us:
+                        <a href="#">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <form class="subscribe" action="/" method="POST">
+                    <input class="subscribe_input" type="email" name="name" placeholder="Your E-mail...">
+                    <button class="subscribe_btn" type="submit">Subscribe</button>
+                </form>
+            </div>
+
+            <div class="footer_col footer_col--second">
+                <div class="footer_title">Blogs</div>
+                <div class="blogs">
+                    <div class="blogs_item">
+                        <img class="blogs_img" src="assets/images/blog/1.jpg" alt="">
+                        <div class="blogs_content">
+                            <a class="blogs_title" href="#">Lorem ipsum dolor</a>
+                            <div class="blogs_date">Jan 9, 2016</div>
+                        </div>
+                    </div>
+
+                    <div class="blogs_item">
+                        <img class="blogs_img" src="assets/images/blog/2.jpg" alt="">
+                        <div class="blogs_content">
+                            <a class="blogs_title" href="#">Lorem ipsum dolor</a>
+                            <div class="blogs_date">Jan 9, 2016</div>
+                        </div>
+                    </div>
+
+                    <div class="blogs_item">
+                        <img class="blogs_img" src="assets/images/blog/3.jpg" alt="">
+                        <div class="blogs_content">
+                            <a class="blogs_title" href="#">Lorem ipsum dolor</a>
+                            <div class="blogs_date">Jan 9, 2016</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer_col footer_col--third">
+                <div class="footer_title">Instagram</div>
+
+                <div class="instagram">
+                    <a class="instagram_item" href="#">
+                        <img src="assets/images/instagram/1.jpg" alt="">
+                    </a>
+                    <a class="instagram_item" href="#">
+                        <img src="assets/images/instagram/2.jpg" alt="">
+                    </a>
+                    <a class="instagram_item" href="#">
+                        <img src="assets/images/instagram/3.jpg" alt="">
+                    </a>
+                    <a class="instagram_item" href="#">
+                        <img src="assets/images/instagram/4.jpg" alt="">
+                    </a>
+                    <a class="instagram_item" href="#">
+                        <img src="assets/images/instagram/5.jpg" alt="">
+                    </a>
+                    <a class="instagram_item" href="#">
+                        <img src="assets/images/instagram/6.jpg" alt="">
+                    </a>
+                    <a class="instagram_item" href="#">
+                        <img src="assets/images/instagram/7.jpg" alt="">
+                    </a>
+                    <a class="instagram_item" href="#">
+                        <img src="assets/images/instagram/8.jpg" alt="">
+                    </a>
+                    <a class="instagram_item" href="#">
+                        <img src="assets/images/instagram/9.jpg" alt="">
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="copyright">
+            @ 2016 MoGo free PSD template bu <span>Laaqiq</span>
+        </div>
+
+    </div>
+</footer>
+
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
 </html>
