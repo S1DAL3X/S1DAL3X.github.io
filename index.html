@@ -1,47 +1,34 @@
 <!doctype html>
 <html>
-<head>
     <meta charset="utf-8">
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Smooch&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Cardo:ital@1&family=Open+Sans:wght@700&family=Raleway:wght@300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
+    
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>ActiveBox</title>
+    <title>The Forest</title>
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<head>
 </head>
 <body>
-    
-    <!--  SVG Sprite  -->
-    <svg style="display: none;">
-        <symbol id="facebook" viewBox="0 0 430.113 430.114">
-            <g>
-                <path d="M158.081,83.3c0,10.839,0,59.218,0,59.218h-43.385v72.412h43.385v215.183h89.122V214.936h59.805
-                    c0,0,5.601-34.721,8.316-72.685c-7.784,0-67.784,0-67.784,0s0-42.127,0-49.511c0-7.4,9.717-17.354,19.321-17.354
-                    c9.586,0,29.818,0,48.557,0c0-9.859,0-43.924,0-75.385c-25.016,0-53.476,0-66.021,0C155.878-0.004,158.081,72.48,158.081,83.3z"/>
-            </g>
-        </symbol>
-    </svg>
     
     <!-- Header -->
     <header class="header" id="header">
         <div class="container">
             <div class="header__inner">
-                <div class="header__logo">
-                    <img src="img/activebox-logo.png" alt="">
-                </div>
-                
+                <div class="header__logo">The Forest</div>
+
                 <nav class="nav" id="nav">
-                    <a class="nav__link" href="#" data-scroll="#features">Features</a>
+                    <a class="nav__link" href="#" data-scroll="#intro">Home</a>
+                    <a class="nav__link" href="#" data-scroll="#about">About</a>
                     <a class="nav__link" href="#" data-scroll="#works">Works</a>
-                    <a class="nav__link" href="#" data-scroll="#team">Our Team</a>
-                    <a class="nav__link" href="#" data-scroll="#reviews">Testimonials</a>
-                    <a class="nav__link" href="#" data-scroll="#download">Download</a>
+                    <a class="nav__link" href="#" data-scroll="#feedback">Feedback</a>
                 </nav>
-                
+
                 <button class="burger" type="button" id="navToggle">
                     <span class="burger__item">Menu</span>
                 </button>
@@ -52,386 +39,223 @@
     <!-- Intro -->
     <div class="intro" id="intro">
         <div class="container">
-            <div class="intro__inner">
-                <h1 class="intro__title">Your Favorite One Page Multi Purpose Template</h1>
-                <h2 class="intro__subtitle">
-                    Lorem ipsum dolor set amlet concentrenut elit. 
-                    Praesent commodo cursus magna vel scelntrentum nisl concentrenlit et.
-                </h2>
-                <a class="btn btn--red" href="#">Find Out More</a>
+            <div class="intro__text">
+                <h1 class="intro__title">Hello, my name is Aleksey Sidorenko.</h1>
+                <h5 class="inttro__subtitle">Programmer/Web-developer</h5>
             </div>
         </div>
     </div>
     
-    <!-- Features -->
-    <div class="container" id="features">
-        <div class="features">
+    <!-- About -->
+    <div class="about" id="about">
+        <div class="container">
             
-            <div class="features__item">
-                <img class="features__icon" src="img/features/feature-1.png">
-                <h4 class="features__title">Easily Customized</h4>
-                <div class="features__text">
-                    Cras justo odio, dipbapulis ac factilisic in,
-                    egetas egat quam. Nullaniain quis rius eget urna mollis orenavem vel eu leo. Donec ullacomperer nulla non metus auctor fringilla.
-                </div>
+            <div class="section__title">
+                <span class="section__overtitle">Who Am I</span>
+                <span class="section__title__text"><h1>About me</h1></span>
             </div>
             
-            <div class="features__item">
-                <img class="features__icon" src="img/features/feature-2.png">
-                <h4 class="features__title">Responsive Ready</h4>
-                <div class="features__text">
-                    Cras justo odio, dipbapulis ac factilisic in,
-                    egetas egat quam. Nullaniain quis rius eget urna mollis orenavem vel eu leo. Donec ullacomperer nulla non metus auctor fringilla.
+            <div class="about__inner">
+                
+                <div class="about__block">
+                    <p class="about__text">
+                        <span class="about__bold">
+                        Development of websites with a beautiful design for you.
+                        </span><br>
+                        Hello, my name's John Doe. I'm programmer and web-developer from Krasnoyarsk, Russia. I'm coding from 2018 and now I can use Python, C++, JS and can make responsive layput web-templates with HTML5, CSS3, JS, jQuery, Bootstrap and more. Email: mail@gmail.com
+                    </p>
                 </div>
-            </div>
-            
-            <div class="features__item">
-                <img class="features__icon" src="img/features/feature-3.png">
-                <h4 class="features__title">Modern Design</h4>
-                <div class="features__text">
-                    Cras justo odio, dipbapulis ac factilisic in,
-                    egetas egat quam. Nullaniain quis rius eget urna mollis orenavem vel eu leo. Donec ullacomperer nulla non metus auctor fringilla.
+                
+                <div class="about__block skills">
+                    <div class="skill">
+                        HTML5/CSS3/JS
+                        <div class="skill__progress" style="width: 90%"></div>
+                    </div>
+                    <div class="skill">
+                        jQuery
+                        <div class="skill__progress" style="width: 70%"></div>
+                    </div>
+                    <div class="skill">
+                        C++
+                        <div class="skill__progress" style="width: 50%"></div>
+                    </div>
+                    <div class="skill">
+                        Python
+                        <div class="skill__progress" style="width: 100%"></div>
+                    </div>
                 </div>
+                
             </div>
-            
-            <div class="features__item">
-                <img class="features__icon" src="img/features/feature-4.png">
-                <h4 class="features__title">Clean Code</h4>
-                <div class="features__text">
-                    Cras justo odio, dipbapulis ac factilisic in,
-                    egetas egat quam. Nullaniain quis rius eget urna mollis orenavem vel eu leo. Donec ullacomperer nulla non metus auctor fringilla.
-                </div>
-            </div>
-            
-            <div class="features__item">
-                <img class="features__icon" src="img/features/feature-5.png">
-                <h4 class="features__title">Ready to Ship</h4>
-                <div class="features__text">
-                    Cras justo odio, dipbapulis ac factilisic in,
-                    egetas egat quam. Nullaniain quis rius eget urna mollis orenavem vel eu leo. Donec ullacomperer nulla non metus auctor fringilla.
-                </div>
-            </div>
-            
-            <div class="features__item">
-                <img class="features__icon" src="img/features/feature-6.png">
-                <h4 class="features__title">Download for Free</h4>
-                <div class="features__text">
-                    Cras justo odio, dipbapulis ac factilisic in,
-                    egetas egat quam. Nullaniain quis rius eget urna mollis orenavem vel eu leo. Donec ullacomperer nulla non metus auctor fringilla.
-                </div>
-            </div>
-            
-        </div><!-- /.features -->
-    </div><!-- /.container -->
+        </div>
+    </div>
     
-    <!--  Works  -->
+    <!-- GitHub -->
+    <div class="github" id="github">
+        <h1 class="github__title">Go to my GitHub</h1>
+        <h4 class="github__subtitle">More projects on GitHub repositories</h4>
+        <a class="btn" href="https://github.com/S1DAL3X">GitHub</a>
+    </div>
+    
+    <!-- Works -->
     <div class="works" id="works">
-        
-        <div class="works__item">
-            <img class="works__photo" src='img/works/work-1.jpg'>
-            <div class="works__content">
-                <div class="works__title">Project Name</div>
-                <div class="works__text">User Interface Design</div>
-            </div>
-        </div>
-        
-        <div class="works__item">
-            <img class="works__photo" src='img/works/work-2.jpg'>
-            <div class="works__content">
-                <div class="works__title">Project Name</div>
-                <div class="works__text">User Interface Design</div>
-            </div>
-        </div>
-        
-        <div class="works__item">
-            <img class="works__photo" src='img/works/work-3.jpg'>
-            <div class="works__content">
-                <div class="works__title">Project Name</div>
-                <div class="works__text">User Interface Design</div>
-            </div>
-        </div>
-        
-        <div class="works__item">
-            <img class="works__photo" src='img/works/work-4.jpg'>
-            <div class="works__content">
-                <div class="works__title">Project Name</div>
-                <div class="works__text">User Interface Design</div>
-            </div>
-        </div>
-        
-        <div class="works__item">
-            <img class="works__photo" src='img/works/work-5.jpg'>
-            <div class="works__content">
-                <div class="works__title">Project Name</div>
-                <div class="works__text">User Interface Design</div>
-            </div>
-        </div>
-        
-        <div class="works__item">
-            <img class="works__photo" src='img/works/work-6.jpg'>
-            <div class="works__content">
-                <div class="works__title">Project Name</div>
-                <div class="works__text">User Interface Design</div>
-            </div>
-        </div>
-        
-        <div class="works__item">
-            <img class="works__photo" src='img/works/work-7.jpg'>
-            <div class="works__content">
-                <div class="works__title">Project Name</div>
-                <div class="works__text">User Interface Design</div>
-            </div>
-        </div>
-        
-        <div class="works__item">
-            <img class="works__photo" src='img/works/work-8.jpg'>
-            <div class="works__content">
-                <div class="works__title">Project Name</div>
-                <div class="works__text">User Interface Design</div>
-            </div>
-        </div>
-        
-    </div><!-- /.works -->
-    
-    <!--  Team  -->
-    <div class="team" id="team">
-        <div class="container">
-            <div class="team__inner">
-                
-                <div class="team__item">
-                    <img class="team__photo" src="img/team/team-1.jpg">
-                    <div class="team__name">Ruth Woods</div>
-                    <div class="team__prof">Founder, Ceo</div>
-                    <div class="team__text">
-                        <p>Lorem ipsum dolor set amlet concentrenut elit. Praesent commodo cursus magna vel scelntrentum nisl concentrenlit et.</p>
-                        <p>Lorem ipsum dolor set amlet concentrenut elit. Praesent commodo cursus magna vel scelntrentum nisl concentrenlit et.</p>
-                    </div>
-                    <div class="social">
-                        <a class="social__item" href="#" target="_blank">
-                            <svg class="social__icon">
-                                <use xlink:href="#facebook"></use>
-                            </svg>
-                        </a>
-                        <a class="social__item" href="#" target="_blank">
-                            <svg class="social__icon">
-                                <use xlink:href="#facebook"></use>
-                            </svg>
-                        </a>
-                        <a class="social__item" href="#" target="_blank">
-                            <svg class="social__icon">
-                                <use xlink:href="#facebook"></use>
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-                
-                <div class="team__item">
-                    <img class="team__photo" src="img/team/team-2.jpg">
-                    <div class="team__name">Timoty Reed</div>
-                    <div class="team__prof">Co-Founder, Developer</div>
-                    <div class="team__text">
-                        <p>Lorem ipsum dolor set amlet concentrenut elit. Praesent commodo cursus magna vel scelntrentum nisl concentrenlit et.</p>
-                        <p>Lorem ipsum dolor set amlet concentrenut elit. Praesent commodo cursus magna vel scelntrentum nisl concentrenlit et.</p>
-                    </div>
-                    <div class="social">
-                        <a class="social__item" href="#" target="_blank">
-                            <svg class="social__icon">
-                                <use xlink:href="#facebook"></use>
-                            </svg>
-                        </a>
-                        <a class="social__item" href="#" target="_blank">
-                            <svg class="social__icon">
-                                <use xlink:href="#facebook"></use>
-                            </svg>
-                        </a>
-                        <a class="social__item" href="#" target="_blank">
-                            <svg class="social__icon">
-                                <use xlink:href="#facebook"></use>
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-                
-                <div class="team__item">
-                    <img class="team__photo" src="img/team/team-3.jpg">
-                    <div class="team__name">Victoria Valdex</div>
-                    <div class="team__prof">UI-Designer</div>
-                    <div class="team__text">
-                        <p>Lorem ipsum dolor set amlet concentrenut elit. Praesent commodo cursus magna vel scelntrentum nisl concentrenlit et.</p>
-                        <p>Lorem ipsum dolor set amlet concentrenut elit. Praesent commodo cursus magna vel scelntrentum nisl concentrenlit et.</p>
-                    </div>
-                    <div class="social">
-                        <a class="social__item" href="#" target="_blank">
-                            <svg class="social__icon">
-                                <use xlink:href="#facebook"></use>
-                            </svg>
-                        </a>
-                        <a class="social__item" href="#" target="_blank">
-                            <svg class="social__icon">
-                                <use xlink:href="#facebook"></use>
-                            </svg>
-                        </a>
-                        <a class="social__item" href="#" target="_blank">
-                            <svg class="social__icon">
-                                <use xlink:href="#facebook"></use>
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-                
-                <div class="team__item">
-                    <img class="team__photo" src="img/team/team-4.jpg">
-                    <div class="team__name">Beverly Little</div>
-                    <div class="team__prof">Data Scientist</div>
-                    <div class="team__text">
-                        <p>Lorem ipsum dolor set amlet concentrenut elit. Praesent commodo cursus magna vel scelntrentum nisl concentrenlit et.</p>
-                        <p>Lorem ipsum dolor set amlet concentrenut elit. Praesent commodo cursus magna vel scelntrentum nisl concentrenlit et.</p>
-                    </div>
-                    <div class="social">
-                        <a class="social__item" href="#" target="_blank">
-                            <svg class="social__icon">
-                                <use xlink:href="#facebook"></use>
-                            </svg>
-                        </a>
-                        <a class="social__item" href="#" target="_blank">
-                            <svg class="social__icon">
-                                <use xlink:href="#facebook"></use>
-                            </svg>
-                        </a>
-                        <a class="social__item" href="#" target="_blank">
-                            <svg class="social__icon">
-                                <use xlink:href="#facebook"></use>
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-                
-            </div><!-- /.team__inner -->
-        </div><!-- /.container -->
-    </div><!-- /.team -->
-    
-    <!--  Testimonials  -->
-    <div class="reviews" id="reviews">
         <div class="container">
             
-            <div class="reviews__slider" id="reviewsSlider">
-                
-                <div class="slick-item">
-                    <div class="reviews__item">
-                        <div class="reviews__photo">
-                            <img class="reviews__img" src="img/reviews/review-1.jpg">
-                        </div>
-                        <div class="reviews__content">
-                            <div class="reviews__text">
-                                "Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec sed odio dui. Anean eu leo quam..."
-                            </div>
-                            <div class="reviews__author">
-                                Susan Sims, Interaction Designer ar XYZ
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="slick-item">
-                    <div class="reviews__item">
-                        <div class="reviews__photo">
-                            <img class="reviews__img" src="img/reviews/review-1.jpg">
-                        </div>
-                        <div class="reviews__content">
-                            <div class="reviews__text">
-                                "Lorem ipsum dolor sit amlet, concensentur alisingling edit. Reppelat irue sed placetat laborim..."
-                            </div>
-                            <div class="reviews__author">
-                                Susan Sims, Interaction Designer ar XYZ
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
+            <div class="section__title">
+                <span class="section__overtitle">What I Do</span>
+                <span class="section__title__text"><h1>Works</h1></span>
             </div>
             
-        </div><!-- /.container -->
-    </div><!-- /.reviews -->
-    
-    <!--  Download  -->
-    <div class="download" id="download">
-        <div class="container">
-            <h3 class="download__title">Are You Ready to Start? Download Now For Free!</h3>
-            <div class="download__text">
-                <p>Fusce dapibus, tellus ac cursus commodo</p>
+            <div class="work">
+                
+                <div class="work__item">
+                    <div class="work__inner">
+                        <div class="work__img">
+                            <a href="Mogo/index.html"><img src="img/works/Mogo%20Picture.png"></a>
+                        </div>
+                        <div class="work__text">
+                            <p class="work__title">Mogo Template</p>
+                            <p class="work__subtitle">
+                                HTML5/CSS3/JS<br>
+                                Responsive
+                            </p>
+                        </div>
+                    </div>
+                    <div class="work__info">
+                        <div class="work__name">Mogo</div>
+                        <div class="work__prof">Landing Template</div>
+                    </div>
+                </div>
+                
+                <div class="work__item"> 
+                    <div class="work__inner">
+                        <div class="work__img">
+                            <a href="ActiveBox/index.html"><img src="img/works/ActiveBox%20Picture.png"></a>
+                        </div>
+                        <div class="work__text">
+                            <p class="work__title">ActiveBox Template</p>
+                            <p class="work__subtitle">
+                                HTML5/CSS3/JS<br>
+                                Responsive
+                            </p>
+                        </div>
+                    </div>
+                    <div class="work__info">
+                        <div class="work__name">ActiveBox</div>
+                        <div class="work__prof">Landing Template</div>
+                    </div>
+                </div>
+                
+                <div class="work__item"> 
+                    <div class="work__inner">
+                        <div class="work__img">
+                            <a href="index.html"><img src="img/works/The%20Forest%20Picture.png"></a>
+                        </div>
+                        <div class="work__text">
+                            <p class="work__title">The Forest Template</p>
+                            <p class="work__subtitle">
+                                HTML5/CSS3/JS<br>
+                                Responsive
+                            </p>
+                        </div>
+                    </div>
+                    <div class="work__info">
+                        <div class="work__name">The Forest</div>
+                        <div class="work__prof">Personal Template</div>
+                    </div>
+                </div>
+                
             </div>
-            <a class="btn btn--red btn--long" href="#">Download Here</a>
         </div>
     </div>
     
-    <!--  Footer  -->
+    <!-- Map -->
+    <div class="map">
+        <div class="container">
+            <div><i class="fas fa-map-marker-alt"></i></div>
+            <p>Open Map</p>
+            <a class="btn" href="https://github.com/S1DAL3X">Google Maps</a>
+        </div>
+    </div>
+    
+    <!-- Feedback -->
+    <div class="feedback" id="feedback">
+        <div class="container">
+            
+            <div class="section__title">
+                <span class="section__overtitle">Contact me</span>
+                <span class="section__title__text"><h1>Feedback</h1></span>
+            </div>
+            
+            <div class="about__inner">
+                
+                <div class="about__block" style="width: 100%; text-align: center;">
+                    <p class="about__text">
+                        <span class="about__bold">
+                        Leave a request for creation.
+                        </span><br>
+                        To submit a request, contact me in personal message in VK (https://vk.com/vspishka124), Instagram or by one of the links, or leave a message by mail.
+                    </p>
+                </div>
+                
+            </div>
+            
+        </div>
+    </div>
+    
+    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             
             <div class="footer__inner">
-                <div class="footer__block">
-                    <h4 class="footer__title">Location</h4>
-                    <address class="footer__address">
-                        <div>3481 Melrose Place</div>
-                        <div>Beverly Hills, CA 90210</div>
-                    </address>
-                </div>
                 
                 <div class="footer__block">
-                    <h4 class="footer__title">Share with Love</h4>
-                    <div class="social social--footer">
-                        <a class="social__item" href="#" target="_blank">
-                            <svg class="social__icon">
-                                <use xlink:href="#facebook"></use>
-                            </svg>
-                        </a>
-                        <a class="social__item" href="#" target="_blank">
-                            <svg class="social__icon">
-                                <use xlink:href="#facebook"></use>
-                            </svg>
-                        </a>
-                        <a class="social__item" href="#" target="_blank">
-                            <svg class="social__icon">
-                                <use xlink:href="#facebook"></use>
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-                
-                <div class="footer__block">
-                    <h4 class="footer__title">About ActiveBox</h4>
+                    <div class="footer__title">Location</div>
                     <div class="footer__text">
-                        <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec ullamcorper nulla non metus auctor fringilla.
-                        </p>
+                        10 Maerchaka Street, Balance Hall<br>
+                        660075, Krasnoyarsk, Russian Federation
                     </div>
                 </div>
-            </div><!-- /.footer__inner -->
-            
-        </div><!-- /.container -->
-        <div class="copyright">
-            <div class="container">
-                <div class="copyright__text">
-                    <div>Copyright @2015 ActiveBox. All Rights Reserved</div>
-                    <div>Template by Kamal Chaneman</div>
-                    <div><span>HTML/CSS layout by S1DAL3X</span></div>
+
+                <div class="footer__block">
+                    <div class="footer__title">Social Links</div>
+                    <div class="footer__text">
+                        <a href="https://vk.com/unknown.crime">
+                            <i class="fab fa-vk"></i>
+                        </a>
+                        <a href="https://www.instagram.com/s.a._24/">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://github.com/S1DAL3X">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://www.twitter.com">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </div>
                 </div>
+
+                <div class="footer__block">
+                    <div class="footer__title">About The Forest</div>
+                    <div class="footer__text">
+                        The Forest this is personal website (portfolio) for public my templates and works, made by S1DAL3X with using HTML5, CSS3, JS and jQuery
+                    </div>
+                </div>
+                
             </div>
+            
         </div>
     </footer>
     
+    <!-- Copyright -->
+    <div class="copyright">
+        <div class="container">
+            Copyright @2022 The Forest. All Rights Reserved<br>
+            Made with ♥ by S1DAL3X
+        </div>
+    </div>
     
-    <!-- JavaScript -->
-    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-
+    
     <script src="app.js"></script>
+    
 </body>
 </html>
-
-
-
-
-
-
-
-
-

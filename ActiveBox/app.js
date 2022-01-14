@@ -33,13 +33,10 @@ $(function() {
         let elementId = $(this).data("scroll");
         let elementOffset = $(elementId).offset().top;
         
-        let header = $("#header");
-        let headerH = header.innerHeight();
-        
         nav.removeClass("show");
         
         $("html, body").animate({
-            scrollTop: elementOffset + 1
+            scrollTop: elementOffset - 70
         }, 700);
     });
     
@@ -50,4 +47,21 @@ $(function() {
         nav.toggleClass("show");
     });
     
+    /* Reviews https://kenwheeler.github.io/slick/*/
+    let slider = $("#reviewsSlider");
+    
+    slider.slick({
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        fade: true,
+        arrows: false,
+        dots: true
+    });
+    
 });
+
+
+
+
+
