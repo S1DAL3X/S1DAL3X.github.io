@@ -634,6 +634,11 @@ p{
 
 @media (max-width: 767px){
     
+    /* Intro */
+    .intro__text{
+        margin-top: -100px;
+    }
+    
     /* About */
     .about__bold{
         font-size: 45px;
@@ -678,6 +683,11 @@ p{
     .header__logo{
         padding-left: 0px;
         font-size: 38px;
+    }
+    
+    /* Intro */
+    .intro__text{
+        margin-top: -150px;
     }
     
     /* Burger */
