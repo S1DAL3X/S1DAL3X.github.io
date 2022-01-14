@@ -135,9 +135,6 @@ p{
     width: 28px;
 }
 
-.header.fixed .burger{
-    color: #000;
-}
 
 
 /* Nav */
@@ -187,13 +184,20 @@ p{
     
     text-align: center;
     height: 780px;
+    
     background-image: url("img/background_image.jpg");
     background-position: 50% 0px;
+    
     align-items: center;
+    
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    
     display: flex;
     min-height: 100vh;
     position: relative;
