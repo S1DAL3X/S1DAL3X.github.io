@@ -135,6 +135,9 @@ p{
     width: 28px;
 }
 
+.header.fixed .burger{
+    color: #000;
+}
 
 
 /* Nav */
