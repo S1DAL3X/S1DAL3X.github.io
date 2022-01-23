@@ -27,6 +27,29 @@ $(function(){
         
     });
     
+    /* Smooth scroll */
+    /* =========================================== */
+    
+    $("[data-scroll]").on("click", function(event){
+        event.preventDefault();
+        
+        var deviceWidth = $(window).width();
+        
+        var $this = $(this),
+            blockId = $this.data("scroll");
+
+            if(deviceWidth >= 991){
+                blockOffset = $(blockId).offset().top - 40;
+            }else{
+                blockOffset = $(blockId).offset().top - 120;
+            }
+            //blockOffset = $(blockId).offset().top - 40;
+
+        $("html, body").animate({
+            scrollTop: blockOffset
+        }, 500);
+    });
+    
     /* Modal */
     /* =========================================== */
     

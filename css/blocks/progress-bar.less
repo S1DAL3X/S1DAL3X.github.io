@@ -7,6 +7,7 @@
 .progress-bar__item{
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     margin-bottom: .3rem;
 }
 
@@ -15,8 +16,22 @@
     font-weight: 300;
 }
 
+.progress-bar__left{
+    min-width: 100px;
+}
+
 .progress-bar__right{
     padding-left: 1.2rem;
+    
+    @media @mobile{
+        margin-top: .3rem;
+        margin-bottom: .3rem;
+        padding-left: 0;
+    }
+    
+    @media @mobile-sm{
+        max-width: 6rem;
+    }
 }
 
 .progress-bar__bar{
@@ -24,6 +39,10 @@
     height: 6px;
     
     background-color: #efefef;
+    
+    @media @mobile-sm{
+        max-width: 8rem;
+    }
 }
 
 .progress-bar__progress{
