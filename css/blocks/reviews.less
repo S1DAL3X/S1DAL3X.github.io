@@ -14,10 +14,36 @@
 }
 
 .reviews__text{    
-    font-size: .94rem;
-    line-height: 2.2;
-    color: @white;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    
+    font-size: 85px;
+}
+
+.reviews__git{
     text-align: center;
+}
+
+.news__title__git{
+    color: @white;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.reviews_tech{
+    text-align: center;
+    width: 16.66666%;
+    
+    @media @tablet {
+        width: 33.33333%;
+    }
+    
+    @media @mobile {
+        width: 50%;
+    }
 }
 
 .reviews__author{

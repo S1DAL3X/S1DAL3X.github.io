@@ -1,7 +1,7 @@
 // main: ../style.less
 
 .intro{
-    @media @mobile {
+    @media @tablet {
         margin-top: 100px;
     }
 }
@@ -64,18 +64,45 @@
     color: fade(@black, 70%);
 }
 
+.intro__photo--mobile{
+    display: none;
+    
+    @media @mobile {
+        display: block;
+        border-radius: 7px;
+        max-width: 200px;
+    }
+    
+    @media @mobile-sm {
+        display: none;
+    }
+}
+
 .intro__photo{
+    border-radius: 3px;
+    max-width: 700px;
+    height: auto;
     position: absolute;
-    bottom: -1px;
-    right: 0;
+    bottom: 40px;
+    right: -50px;
     z-index: 1;
     
+    @media @notebook-bg {
+        max-width: 650px;
+        right: 0px;
+    }
+    
+    @media @notebook {
+        max-width: 600px;
+    }
+    
     @media @tablet {
-        width: 350px;
+        max-width: 400px;
+        bottom: 60px;
     }
     
     @media @mobile {
-        width: 300px;
+        display: none;
     }
     
     @media @mobile-sm {
