@@ -103,9 +103,6 @@ body{
 }
 
 @media screen and (max-width: 980px) {
-   .gallery__item img{
-        width: 85%;
-    }
     .gallery{
         /* Увеличение изображений */
         transform: scale(4.2);
