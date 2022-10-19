@@ -77,6 +77,8 @@ body{
 .gallery__item img{
     width: 100%;
     display: block;
+    
+    will-change: transform;
 }
 
 .loaded .gallery{
