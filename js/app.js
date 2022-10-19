@@ -14,6 +14,6 @@ window.onload = function() {
         inertia: true
     });
         
-    }, 200)
+    }, 800)
     
 }
