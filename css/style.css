@@ -128,7 +128,6 @@ h1{
 .site__logo{
     font-size: 24px;
     font-weight: 900;
-    font-style: italic;
     
     background: linear-gradient(90deg, #db01df 33%, #ef062d 66%);
     -webkit-background-clip: text;
