@@ -1,0 +1,884 @@
+@font-face {
+    font-family: 'Mistral';
+    src: url('Mistral.ttf');
+}
+@font-face {
+    font-family: 'Century Gothic';
+    src: url('centurygothic.ttf');
+}
+@font-face {
+  font-family: 'BookmanOldStyle';
+  src: url("https://fontsforyou.com/fonts/b/BookmanOldStyle.ttf");
+}
+@font-face {
+  font-family: 'Book Antiqua';
+  src: url("bookantiqua.ttf");
+}
+@font-face {
+  font-family: 'Monotype Corsiva';
+  src: url("Monotype-Corsiva-Regular-Italic.ttf");
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+    scroll-behavior: smooth;
+}
+body::-webkit-scrollbar{
+    display: none;
+}
+
+.preloader{
+    position: relative;
+    height: 100vh;
+    width: 100%;
+}
+.preloader_img{
+    height: 100vh;
+    width: 100%;
+    background-image: url("../img/preloader.jpg");
+    background-size: cover;
+    background-position: center;
+    transition: all 2s ease-in-out;
+}
+.preloader_container{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    text-align: center;
+}
+.preloader_title{
+    font-family: 'Mistral';
+    font-size: 80px;
+    font-style: italic;
+    color: #fff;
+}
+.preloader_subtitle{
+    font-family: 'Century Gothic';
+    font-size: 22px;
+    font-style: italic;
+    color: #fff;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+.preloader_button{
+    height: auto;
+    width: 250px;
+    font-family: 'Century Gothic';
+    font-size: 14px;
+    border: 1px solid #fff;
+    border-radius: 100px;
+    padding: 2px;
+    background: url("../img/open-text_slider.svg") 60% 50% no-repeat;
+    background-size: 150px auto;
+    margin: 0 auto;
+    
+    transition: 1s;
+}
+.preloader_button:hover{
+    cursor: pointer;
+    background-size: 160px auto;
+}
+.arrow{
+    width: 48px;
+    height: 48px;
+    background: url("../img/arrow.svg") 50% 50% no-repeat;
+    
+    animation: arrow_animation 1s 0s infinite;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes arrow_animation{
+0%, 100%{
+    transform: translateX(0);
+}
+50%{
+    transform: translateX(5px);
+}
+}
+
+.main{
+    overflow: hidden;
+}
+.welcome{
+    height: 100vh;
+    padding-left: 150px;
+    background-image: url("../img/welcome_image.jpg");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+.welcome_container{
+    position: absolute;
+    bottom: 0;
+    padding-bottom: 50px;
+}
+.welcome_title{
+    font-size: 100px;
+    color: #ffffff;
+}
+.welcome_title span{
+    color: #e6e6e6;
+}
+.welcome_date{
+    font-family: 'Monotype Corsiva';
+    font-size: 63px;
+    margin-top: 50px;
+    font-style: italic;
+    color: #ffffff;
+}
+
+
+.family{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: #333333;
+}
+.family_container{
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.family_img{
+    height: 550px;
+    width: 330px;
+}
+.family_img_2{
+    width: 553px;
+    height: 363px;
+    margin-top: 100px;
+}
+/*.family_text{
+    width: 650px;
+    margin-top: 120px;
+}
+.family_text_title{
+    font-size: 72px;
+}
+.family_text_subtitle{
+    font-family: "Book Antiqua";
+    font-size: 24px;
+    margin-top: 30px;
+}*/
+
+
+.calendar{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    color: #333333;
+    display: flex;
+    justify-content: center;
+    background-image: url("../img/calendar_bg.jpg");
+    background-size: cover;
+    background-position: center;
+}
+.calendar_text{
+    font-size: 72px;
+    text-align: center;
+    margin-right: 80px;
+    margin-top: 100px;
+}
+.calendar_img{
+    width: 510px;
+    height: 558px;
+}
+
+
+
+.wedding{
+    color: #333333;
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+.wedding_title{
+    font-size: 72px;
+    text-align: center;
+}
+.wedding_title_image{
+    width: 100%;
+    text-align: center;
+}
+.wedding_title_img{
+    width: 800px;
+    height: 100px;
+}
+.wedding_main_image{
+    width: 100%;
+    text-align: center;
+}
+.wedding_main_img{
+    width: 950px;
+    height: 700px;
+}
+.wedding_container{
+    width: auto;
+    display: flex;
+    justify-content: center;
+}
+.wedding_text{
+    font-family: 'Bookman Old Style';
+    font-size: 32px;
+    width: 950px;
+    height: 100%;
+    padding-top: 20px;
+}
+.wedding_subtext{
+    padding-top: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+.wedding_subtext_p{
+    max-width: 600px;
+    font-size: 24px;
+}
+.wedding_a{
+    color: #333333;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: #E2DED2;
+    padding-top: 18px;
+    padding-left: 40px;
+    padding-right: 40px;
+    text-decoration: none;
+}
+.wedding_a:hover{
+    color: #000;
+    background-color: #ddd0a8;
+    transition: all 0.3s ease;
+}
+.wedding_start{
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #333333;
+    margin-top: 20px;
+}
+
+.evening{
+    background-image: url("../img/calendar_bg.jpg");
+    background-size: cover;
+    background-position: center;
+    padding-top: 150px;
+    padding-bottom: 150px;
+    text-align: center;
+    
+}
+.evening_plan_map{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.plan_img{
+    width: 449px;
+    height: 500px;
+    margin-right: 40px;
+}
+.map_link{
+    overflow: hidden;
+    margin-left: 40px;
+}
+.map{
+    width: 549px;
+    height: 500px;
+    transition: transform 0.2s;
+}
+.map:hover{
+    transform: scale(1.55);
+}
+.evening_div_p{
+    display: flex;
+    justify-content: center;
+}
+.evening_p{
+    font-family: 'Book Antiqua';
+    font-size: 20px;
+    text-align: center;
+    margin-top: 50px;
+    max-width: 1000px;
+}
+
+.dress_code{
+    padding-top: 150px;
+    padding-bottom: 150px;
+}
+.dress_code_title{
+    height: auto;
+    width: 100%;
+    color: #333333;
+    text-align: center;
+    font-size: 72px;
+}
+.mobile_dress_code{
+    display: none;
+}
+.dress_code_container{
+    display: flex;
+    justify-content: space-between;
+}
+.dress_code_img{
+    height: 600px;
+    width: 183px;
+}
+.dress_code_text{
+    font-family: 'Book Antiqua';
+    font-size: 32px;
+    text-align: center;
+
+    padding-top: 200px;
+}
+
+.gifts{
+    font-family: 'Book Antiqua';
+    color: #333333;
+    padding-top: 170px;
+    padding-bottom: 10px;
+    background-color: #F6F4EE;
+}
+.gifts_title{
+    font-family: 'Book Antiqua';
+    height: auto;
+    width: 100%;
+    color: #333333;
+    text-align: center;
+    font-size: 72px; 
+}
+.gifts_text{
+    font-family: 'Book Antiqua';
+    font-size: 52px;
+    text-align: center;
+    margin-top: 100px;
+}
+.gifts_text span{
+    font-family: 'Mistral';
+    font-size: 60px;
+    font-style: italic;
+    margin: 0 30px 0 30px;
+}
+.gift_img_2{
+    height: 176px;
+    width: 194px;
+}
+
+.confirmation{
+    font-family: 'Book Antiqua';
+    color: #333333;
+    padding-top: 170px;
+    padding-bottom: 170px;
+    text-align: center;
+}
+.confirmation_title{
+    font-family: 'Book Antiqua';
+    height: auto;
+    width: 100%;
+    color: #333333;
+    text-align: center;
+    font-size: 72px; 
+}
+.confirmation_text{
+    font-family: 'Book Antiqua';
+    font-size: 32px;
+    text-align: center;
+    margin-top: 100px;
+}
+.confirmation_subtext{
+    font-family: 'Century Gothic';
+    font-size: 18px;
+    font-style: italic;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 70px;
+}
+.confirmation_a{
+    color: #333333;
+    font-family: 'Bookman Old Style';
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: #E2DED2;
+    padding-left: 60px;
+    padding-right: 60px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-decoration: none;
+}
+.confirmation_a:hover{
+    color: #000;
+    background-color: #ddd0a8;
+    transition: all 0.3s ease;
+}
+.confirmation_date{
+    margin-top: 70px;
+    font-family: 'Monotype Corsiva';
+    font-size: 52px;
+    font-style: italic;
+    text-align: center;
+}
+
+.end{
+    height: 100vh;
+    background-image: url("../img/welcome_image.jpg");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+.mobile_end_photo{
+    display: none;
+}
+.end_box{
+    position: absolute;
+    bottom: 0;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 150px;
+    padding-right: 150px;
+    background-image: url("../img/bg.webp");
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    width: 500px;
+}
+.end_box_text{
+    color: #000;
+    text-align: center;
+    font-family: 'Century Gothic';
+    font-size: 26px;
+    font-style: italic;
+}
+.end_box_title{
+    text-align: center;
+    font-size: 100px;
+    color: #ffffff;
+}
+
+.footer{
+    background-color: #E1E1E1;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-family: 'Century Gothic';
+    font-style: italic;
+    font-size: 10px;
+}
+
+/* Media */
+
+@media screen and (max-width: 1050px) {
+    .welcome{
+        background-image: url("../img/body_img_2.jpg");
+    }
+}
+
+@media screen and (min-width: 880px){
+    .family_mobile, .mobile_confirmation, .mobile_wedding{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .welcome{
+        background-image: url("../img/body_img_2.jpg");
+        padding: 0;
+    }
+    .welcome_container{
+        width: 100%;
+        text-align: center;
+        padding-bottom: 50px;
+    }
+    .welcome_date{
+        margin-top: 15px;
+    }
+    .calendar_text{
+        margin-right: 30px;
+    }
+    .plan_img{
+        margin-right: 0;
+    }
+    .map_link{
+        margin-left: 0;
+    }
+    .evening_p{
+        max-width: 800px;
+    }
+    .dress_code_text{
+        padding-top: 100px;
+    }
+    .dress_code_text br {
+        display: none;
+    }
+    .dress_code_img{
+        height: 400px;
+        width: 150px;
+    }
+    .gifts_text{
+        font-size: 42px;
+    }
+}
+@media screen and (max-width: 950px) {
+    .wedding_main_img{
+        width: 850px;
+        height: 600px;
+    }
+    .wedding_text_title{
+        padding-left: 50px;
+    }
+    .wedding_subtext{
+        justify-content: center;
+    }
+    .wedding_start{
+        padding-left: 50px;
+    }
+    .plan_img{
+        width: 400px;
+        height: 450px;
+    }
+    .map{
+        width: 500px;
+        height: 450px;
+    }
+}
+@media screen and (max-width: 880px) {
+    .family_container{
+        display: none;
+    }
+    .family_mobile_img{
+        height: 900px;
+        width: 530px;
+    }
+    .family_mobile_image{
+        width: 100%;
+        text-align: center;
+    }
+    .calendar{
+        display: block;
+    }
+    .calendar_text{
+        margin: 0;
+        font-size: 50px;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    .calendar_text p br{
+        display: none;
+    }
+    .calendar_image{
+        width: 100%;
+        text-align: center;
+        margin-top: 30px;
+    }
+    .mobile_confirmation{
+        height: auto;
+        width: 100%;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        text-align: center;
+        background-color: #E2DED2;
+    }
+    .mobile_confirmation a{
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    .wedding{
+        padding-bottom: 0px;
+    }
+    .wedding_title{
+        font-size: 50px;
+    }
+    .wedding_title_img{
+        width: 700px;
+        height: 90px;
+    }
+    .wedding_main_img{
+        width: 600px;
+        height: 450px;
+    }
+    .wedding_text_title{
+        font-size: 28px;
+    }
+    .wedding_subtext{
+        display: block;
+        text-align: center;
+    }
+    .wedding_subtext_p{
+        max-width: none;
+        padding-left: 50px;
+        padding-right: 50px;
+        font-size: 28px;
+        text-align: justify;
+    }
+    .wedding_subtext a{
+        display: none;
+    }
+    .mobile_wedding{
+        margin-top: 30px;
+        margin-bottom: 70px;
+        text-align: center;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    .mobile_wedding a{
+        padding-top: 30px;
+        padding-bottom: 30px;
+        padding-left: 70px;
+        padding-right: 70px;
+        font-family: 'Bookman Old Style';
+        font-size: 18px;
+    }
+    .evening{
+        padding-top: 50px;
+    }
+    .evening_plan_map{
+        display: block;
+    }
+    .plan_img{
+        width: 550px;
+        height: 600px;
+    }
+    .map{
+        width: 650px;
+        height: 600px;
+    }
+    .map:hover{
+        transform: none;
+    }
+    .evening_p{
+        font-size: 22px;
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+    .dress_code{
+        padding-top: 70px;
+        padding-bottom: 70px;
+    }
+    .dress_code_container{
+        display: none;
+    }
+    .mobile_dress_code{
+        display: block;
+    }
+    .mobile_dress_code_img{
+        margin-top: 50px;
+        width: 100%;
+    }
+    .dress_code_title{
+        font-size: 50px;
+    }
+    .gifts{
+        padding-top: 70px;
+    }
+    .gifts_title{
+        font-size: 50px;
+    }
+    .gifts_image{
+        margin-top: 150px;
+        text-align: center;
+    }
+    .gifts_text br{
+        display: none;
+    }
+    .gifts_text span:first-child{
+        font-size: 50px;
+        position: absolute;
+        left: 5px;
+        margin: 0;
+        padding: 0 15px 0 15px;
+    }
+    .gifts_text span:nth-child(2){
+        font-size: 50px;
+        position: absolute;
+        right: 5px;
+        margin: 0;
+        padding: 0 15px 0 15px;
+    }
+    .gifts_text{
+        padding-left: 50px;
+        padding-right: 50px;
+        font-size: 34px;
+    }
+    .gifts_image{
+        margin-top: 100px;
+    }
+    .confirmation{
+        padding-top: 70px;
+        padding-bottom: 70px;
+    }
+    .confirmation_title{
+        font-size: 50px;
+    }
+    .confirmation_text{
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+    .confirmation_text br{
+        display: none;
+    }
+    .end{
+        height: auto;
+        background-image: none;
+        background-size: none;
+        background-position: none;
+    }
+    .mobile_end_photo{
+        display: block;
+        margin-bottom: 430px;
+        width: 100%;
+    }
+    .mobile_end_photo_img{
+        width: 100%;
+    }
+    .end_box{
+        width: 100%;
+        padding-top: 150px;
+    }
+    .footer{
+        font-size: 8px;
+    }
+}
+@media screen and (max-width: 560px) {
+    .welcome_container{
+        padding-bottom: 80px;
+    }
+    .welcome_title{
+        font-size: 70px;
+    }
+    .welcome_date{
+        font-size: 40px;
+    }
+    .family{
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    .family_mobile_img{
+        height: 550px;
+        width: 330px;
+    }
+    .calendar_text{
+        font-size: 32px;
+    }
+    .calendar_img{
+        height: 400px;
+        width: 360px;
+    }
+    .confirmation_a{
+        font-size: 14px;
+    }
+    .wedding{
+        padding-top: 40px;
+    }
+    .wedding_title{
+        font-size: 32px;
+    }
+    .wedding_title_img{
+        width: 100%;
+        height: 50px;
+        margin-bottom: 40px;
+    }
+    .wedding_main_img{
+        width: 390px;
+        height: 300px;
+    }
+    .wedding_text_title{
+        font-size: 16px;
+        padding-left: 10px;
+    }
+    .wedding_subtext_p{
+        font-size: 16px;
+        padding-left: 10px;
+        padding-right: 30px;
+    }
+    .wedding_start{
+        font-size: 16px;
+        padding-left: 10px;
+    }
+    .mobile_wedding a{
+        font-size: 14px;
+    }
+    .evening{
+        text-align: center;
+        padding-bottom: 30px;
+    }
+    .plan_img{
+        max-width: 390px;
+        height: 430px;
+    }
+    .map{
+        max-width: 390px;
+        height: 380px;
+    }
+    .map:hover{
+        transform: none;
+    }
+    .evening_p{
+        font-size: 18px;
+    }
+    .dress_code_title{
+        font-size: 32px;
+    }
+    .gifts_title{
+        font-size: 32px;
+    }
+    .gifts_text{
+        font-size: 18px;
+        margin-top: 50px;
+    }
+    .gifts_text span:first-child{
+        font-size: 32px;
+        padding-right: 0;
+        padding-left: 30px;
+    }
+    .gifts_text span:nth-child(2){
+        font-size: 32px;
+        padding-left: 0;
+        padding-right: 40px;
+    }
+    .gifts_image{
+        margin-top: 50px;
+    }
+    .gift_img_1{
+        height: 200px;
+        width: 200px;
+    }
+    .gift_img_2{
+        height: 100px;
+        width: 100px;
+    }
+    .confirmation{
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    .confirmation_title{
+        font-size: 32px;
+    }
+    .confirmation_text{
+        font-size: 16px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .confirmation_subtext{
+        font-size: 12px;
+    }
+    .confirmation_date{
+        font-size: 32px;
+        margin-top: 50px;
+    }
+    .mobile_end_photo{
+        margin-bottom: 250px;
+    }
+    .end_box_text{
+        font-size: 18px;
+    }
+    .end_box{
+        padding-top: 50px;
+    }
+    .end_box_title{
+        font-size: 70px;
+    }
+}
