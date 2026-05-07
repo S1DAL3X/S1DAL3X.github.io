@@ -12,11 +12,11 @@
 }
 @font-face {
   font-family: 'Book Antiqua';
-  src: url("bookantiqua.ttf");
+  src: url('bookantiqua.ttf');
 }
 @font-face {
   font-family: 'Monotype Corsiva';
-  src: url("Monotype-Corsiva-Regular-Italic.ttf");
+  src: url('Monotype-Corsiva-Regular-Italic.ttf');
 }
 *{
     margin: 0;
@@ -125,7 +125,7 @@ audio::-webkit-media-controls-panel{
 .welcome_container{
     position: absolute;
     bottom: 0;
-    padding-bottom: 50px;
+    padding-bottom: 80px;
 }
 .welcome_title{
     font-size: 100px;
