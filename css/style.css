@@ -1,3 +1,11 @@
+@font-face {
+    font-family: 'Mistral';
+    src: url('https://fontsforyou.com/fonts/m/Mistral.ttf');
+}
+@font-face {
+    font-family: 'Century Gothic';
+    src: url('centurygothic.ttf');
+}
 *{
     margin: 0;
     padding: 0;
@@ -11,9 +19,12 @@ body::-webkit-scrollbar{
 
 .preloader{
     position: relative;
+    height: 100vh;
+    width: 100%;
 }
 .preloader_img{
     height: 100vh;
+    width: 100%;
     background-image: url("../img/preloader.jpg");
     background-size: cover;
     background-position: center;
