@@ -463,7 +463,7 @@ audio::-webkit-media-controls-panel{
     background-color: #E1E1E1;
     text-align: center;
     padding-top: 20px;
-    padding-bottom: 20px;
+    padding-bottom: 60px;
     font-family: 'Century Gothic';
     font-style: italic;
     font-size: 10px;
