@@ -7,11 +7,11 @@ $(document).ready(function() {
 
     
     main.style.display = "none";
-    $( ".preloader_button" ).on( "click", function() {
+    $(".preloader_button").on( "click", function() {
         main.style.display = "block";
         setTimeout(function() {
             preloader.style.display = "none";
-        }, 1000);
+        }, 1500);
     });
     
 });

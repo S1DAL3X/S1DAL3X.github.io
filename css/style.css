@@ -743,6 +743,13 @@ body::-webkit-scrollbar{
     }
 }
 @media screen and (max-width: 560px) {
+    .preloader_title{
+        font-size: 62px;
+    }
+    .preloader_subtitle{
+        margin-top: 10px;
+        font-size: 18px;
+    }
     .welcome_container{
         padding-bottom: 80px;
     }
