@@ -7,7 +7,7 @@
     src: url('centurygothic.ttf');
 }
 @font-face {
-  font-family: 'BookmanOldStyle';
+  font-family: 'Bookman Old Style';
   src: url("https://fontsforyou.com/fonts/b/BookmanOldStyle.ttf");
 }
 @font-face {
@@ -130,7 +130,6 @@ body::-webkit-scrollbar{
     color: #ffffff;
 }
 
-
 .family{
     padding-top: 20px;
     padding-bottom: 20px;
@@ -151,20 +150,6 @@ body::-webkit-scrollbar{
     height: 363px;
     margin-top: 100px;
 }
-/*.family_text{
-    width: 650px;
-    margin-top: 120px;
-}
-.family_text_title{
-    font-size: 72px;
-}
-.family_text_subtitle{
-    font-family: "Book Antiqua";
-    font-size: 24px;
-    margin-top: 30px;
-}*/
-
-
 .calendar{
     padding-top: 50px;
     padding-bottom: 50px;
@@ -185,8 +170,6 @@ body::-webkit-scrollbar{
     width: 510px;
     height: 558px;
 }
-
-
 
 .wedding{
     color: #333333;
@@ -575,6 +558,7 @@ body::-webkit-scrollbar{
         margin-top: 30px;
     }
     .mobile_confirmation{
+        font-family: 'Bookman Old Style';
         height: auto;
         width: 100%;
         padding-top: 30px;
