@@ -102,6 +102,18 @@ body::-webkit-scrollbar{
 .main{
     overflow: hidden;
 }
+
+audio{
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    z-index: 1000;
+    background-color: #e6e6e6;
+}
+audio::-webkit-media-controls-panel{
+    background-color: #e6e6e6;
+}
+
 .welcome{
     height: 100vh;
     padding-left: 150px;
@@ -857,7 +869,7 @@ body::-webkit-scrollbar{
         font-size: 12px;
     }
     .confirmation_date{
-        font-size: 32px;
+        font-size: 32px; 
         margin-top: 50px;
     }
     .mobile_end_photo{
