@@ -128,6 +128,7 @@ audio::-webkit-media-controls-panel{
     padding-bottom: 80px;
 }
 .welcome_title{
+    font-family: 'Times New Roman';
     font-size: 100px;
     color: #ffffff;
 }
@@ -173,6 +174,7 @@ audio::-webkit-media-controls-panel{
     background-position: center;
 }
 .calendar_text{
+    font-family: 'Times New Roman';
     font-size: 72px;
     text-align: center;
     margin-right: 80px;
@@ -189,6 +191,7 @@ audio::-webkit-media-controls-panel{
     padding-bottom: 70px;
 }
 .wedding_title{
+    font-family: 'Times New Roman';
     font-size: 72px;
     text-align: center;
 }
@@ -303,6 +306,7 @@ audio::-webkit-media-controls-panel{
     padding-bottom: 150px;
 }
 .dress_code_title{
+    font-family: 'Times New Roman';
     height: auto;
     width: 100%;
     color: #333333;
@@ -336,7 +340,7 @@ audio::-webkit-media-controls-panel{
     background-color: #F6F4EE;
 }
 .gifts_title{
-    font-family: 'Book Antiqua';
+    font-family: 'Times New Roman';
     height: auto;
     width: 100%;
     color: #333333;
@@ -368,7 +372,7 @@ audio::-webkit-media-controls-panel{
     text-align: center;
 }
 .confirmation_title{
-    font-family: 'Book Antiqua';
+    font-family: 'Times New Roman';
     height: auto;
     width: 100%;
     color: #333333;
@@ -449,6 +453,7 @@ audio::-webkit-media-controls-panel{
     font-style: italic;
 }
 .end_box_title{
+    font-family: 'Times New Roman';
     text-align: center;
     font-size: 100px;
     color: #ffffff;
