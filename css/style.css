@@ -6,6 +6,10 @@
     font-family: 'Century Gothic';
     src: url('centurygothic.ttf');
 }
+@font-face {
+  font-family: 'BookmanOldStyle';
+  src: url("https://fontsforyou.com/fonts/b/BookmanOldStyle.ttf");
+}
 *{
     margin: 0;
     padding: 0;
