@@ -1,201 +1,622 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1"/>
-    <title>Приглашение на свадьбу!</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="icon" href="img/favicon.png" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Лекция: Несъемное протезирование — полная структура</title>
+<style>
+  :root {
+    --primary: #1f6feb;
+    --primary-dark: #0d47a1;
+    --accent: #e8f0fe;
+    --border: #d0d7de;
+    --text: #1f2328;
+    --muted: #57606a;
+    --row-alt: #f6f8fa;
+    --shadow: rgba(31, 111, 235, 0.12);
+    --success: #1a7f37;
+    --warning: #bf8700;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    padding: 40px 20px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background: #f0f3f7;
+    color: var(--text);
+    line-height: 1.6;
+  }
+
+  .wrapper {
+    max-width: 1180px;
+    margin: 0 auto;
+  }
+
+  /* ===== Заголовок документа ===== */
+  .doc-header {
+    text-align: center;
+    margin-bottom: 40px;
+    padding-bottom: 24px;
+    border-bottom: 3px solid var(--primary);
+  }
+
+  .doc-header h1 {
+    font-size: 1.9rem;
+    margin: 0 0 10px;
+    color: var(--primary-dark);
+    line-height: 1.25;
+  }
+
+  .doc-header .meta {
+    color: var(--muted);
+    font-size: 1rem;
+  }
+
+  /* ===== Секции ===== */
+  section {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 28px 30px;
+    margin-bottom: 28px;
+    box-shadow: 0 4px 16px var(--shadow);
+    border: 1px solid var(--border);
+  }
+
+  section h2 {
+    font-size: 1.35rem;
+    margin: 0 0 20px;
+    color: var(--primary-dark);
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--accent);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  section h2::before {
+    content: "";
+    display: inline-block;
+    width: 6px;
+    height: 24px;
+    background: var(--primary);
+    border-radius: 3px;
+  }
+
+  section h3 {
+    font-size: 1.05rem;
+    margin: 20px 0 10px;
+    color: var(--primary-dark);
+  }
+
+  /* ===== Списки ===== */
+  ul, ol {
+    margin: 8px 0 12px;
+    padding-left: 22px;
+  }
+
+  li {
+    margin-bottom: 6px;
+  }
+
+  /* ===== Паспорт лекции (dl) ===== */
+  .passport {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    gap: 10px 20px;
+    margin: 0;
+    padding: 18px 20px;
+    background: var(--accent);
+    border-radius: 10px;
+    border-left: 4px solid var(--primary);
+  }
+
+  .passport dt {
+    font-weight: 600;
+    color: var(--primary-dark);
+  }
+
+  .passport dd {
+    margin: 0;
+  }
+
+  /* ===== Таблицы ===== */
+  .table-container {
+    overflow-x: auto;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.94rem;
+  }
+
+  thead {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+    color: #ffffff;
+  }
+
+  th {
+    padding: 14px 12px;
+    text-align: left;
+    font-weight: 600;
+    font-size: 0.85rem;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+    border-right: 1px solid rgba(255, 255, 255, 0.15);
+    vertical-align: middle;
+  }
+
+  th:last-child { border-right: none; }
+
+  td {
+    padding: 13px 12px;
+    vertical-align: top;
+    border-bottom: 1px solid var(--border);
+    border-right: 1px solid #eef1f4;
+  }
+
+  td:last-child { border-right: none; }
+
+  tbody tr:nth-child(even) { background-color: var(--row-alt); }
+
+  tbody tr:hover {
+    background-color: var(--accent);
+    transition: background-color 0.2s ease;
+  }
+
+  tbody tr:last-child td { border-bottom: none; }
+
+  td.time {
+    text-align: center;
+    font-weight: 600;
+    color: var(--primary-dark);
+    white-space: nowrap;
+    width: 78px;
+  }
+
+  td.stage {
+    font-weight: 600;
+    width: 150px;
+  }
+
+  td.content { width: 46%; }
+
+  td.tools {
+    width: 32%;
+    color: var(--muted);
+    font-size: 0.9rem;
+  }
+
+  .time-badge {
+    display: inline-block;
+    background: var(--accent);
+    color: var(--primary-dark);
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.85rem;
+  }
+
+  .tag {
+    display: inline-block;
+22:25
+background: #eef4ff;
+    color: #2557a7;
+    border: 1px solid #cfdcf5;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 0.78rem;
+    margin: 2px 2px 2px 0;
+    white-space: nowrap;
+  }
+
+  /* ===== Нумерованные блоки содержания ===== */
+  .content-blocks {
+    counter-reset: block;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .content-blocks li {
+    counter-increment: block;
+    position: relative;
+    padding: 14px 16px 14px 56px;
+    margin-bottom: 12px;
+    background: var(--row-alt);
+    border-radius: 10px;
+    border-left: 3px solid var(--primary);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+
+  .content-blocks li:hover {
+    transform: translateX(3px);
+    box-shadow: 0 3px 10px var(--shadow);
+  }
+
+  .content-blocks li::before {
+    content: counter(block);
+    position: absolute;
+    left: 16px;
+    top: 14px;
+    width: 28px;
+    height: 28px;
+    background: var(--primary);
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 0.85rem;
+  }
+
+  .content-blocks li strong {
+    color: var(--primary-dark);
+    display: block;
+    margin-bottom: 4px;
+  }
+
+  /* ===== Карточки домашнего задания ===== */
+  .hw-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 16px;
+  }
+
+  .hw-card {
+    background: var(--row-alt);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 18px;
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+    transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+  }
+
+  .hw-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 18px var(--shadow);
+    border-color: var(--primary);
+  }
+
+  .hw-num {
+    flex-shrink: 0;
+    width: 34px;
+    height: 34px;
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+    color: #fff;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1rem;
+  }
+
+  .hw-card p { margin: 0; }
+
+  /* ===== Вывод / callout ===== */
+  .callout {
+    background: linear-gradient(135deg, #eef4ff 0%, #e8f0fe 100%);
+    border-left: 4px solid var(--primary);
+    padding: 18px 22px;
+    border-radius: 10px;
+    margin-top: 24px;
+    font-size: 0.98rem;
+  }
+
+  .callout strong { color: var(--primary-dark); }
+
+  /* ===== Адаптивность ===== */
+  @media (max-width: 860px) {
+    body { padding: 20px 10px; }
+
+    .doc-header h1 { font-size: 1.4rem; }
+
+    section { padding: 20px 16px; }
+
+    .passport {
+      grid-template-columns: 1fr;
+      gap: 4px;
+    }
+
+    .passport dt {
+      margin-top: 10px;
+    }
+
+    /* Таблица → карточки */
+    table, thead, tbody, th, td, tr { display: block; }
+
+    thead { display: none; }
+
+    tbody tr {
+      margin-bottom: 16px;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      overflow: hidden;
+      background: #ffffff;
+    }
+
+    tbody tr:nth-child(even) { background: #ffffff; }
+
+    td {
+      border-right: none;
+      border-bottom: 1px solid #eef1f4;
+      padding: 12px 14px;
+    }
+
+    td::before {
+      content: attr(data-label);
+      display: block;
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--primary);
+      margin-bottom: 4px;
+    }
+
+    td.time, td.stage, td.content, td.tools {
+      width: 100%;
+      text-align: left;
+    }
+
+    td.time { text-align: left; }
+  }
+</style>
 </head>
 <body>
-    
-    <div class="preloader">
-        <div class="preloader_img" src="img/preloader.jpg" alt=""></div>
-        <div class="preloader_container">
-            <div class="preloader_title">Поздравляем!</div>
-            <div class="preloader_subtitle">Вы попали в круг<br>избранных</div>
-            <div class="preloader_button"><a href="#main"><div class="arrow"></div></a></div>
-        </div>
-    </div>
+  <div class="wrapper">
 
-    <div class="main" id="main">
-        
-        <audio class="audio" controls>
-            <source src="audio/audio.mp3" type="audio/mpeg"> 
-            Ваш браузер не поддерживает тег audio. 
-        </audio>
-        
-        <div class="welcome">
-            <div class="welcome_container">
-                <p class="welcome_title">
-                    ДАРЬЯ <br> <span>&</span> АНТОН
-                </p>
-                <p class="welcome_date">
-                    11 / 07 / 2026
-                </p>
-            </div>
-        </div>
+    <!-- ===== Заголовок ===== -->
+    <header class="doc-header">
+      <h1>Лекция: «Несъемное протезирование:<br>от клинической задачи до лабораторного протокола»</h1>
+      <p class="meta">Полная структура лекции · 90 минут · проблемно-ориентированный формат</p>
+    </header>
 
-        <div class="family">
-            <div class="family_container">
-                <div class="family_image">
-                    <img class="family_img" src="img/wedding_icon_4.jpg" alt="Family">
-                </div>
-                <div class="family_text">
-                    <img class="family_img_2" src="img/family.png" alt="Family">
-                    <!--<p class="family_text_title">
-                        Мы станем <br> семьей!
-                    </p>
-                    <p class="family_text_subtitle">
-                        Совсем скоро состоится день нашей свадьбы, и мы будем
-                        ещё счастливей, если вы разделите с нами этот чудесный
-                        день!
-                    </p>-->
-                </div>
-            </div>
-            <div class="family_mobile">
-                <div class="family_mobile_image">
-                    <img  class="family_mobile_img" src="img/mobile_family.png" alt="">
-                </div>
-            </div>
-            
-        </div>
+    <!-- ===== 1. Паспорт лекции ===== -->
+    <section>
+      <h2>1. Паспорт лекции</h2>
+22:25
+<dl class="passport">
+        <dt>Аудитория</dt>
+        <dd>Студенты зуботехнического отделения / слушатели курсов повышения квалификации</dd>
 
-        <div class="calendar">
-            <div class="calendar_text">
-                <p>
-                Дорогие <br> родные и <br> друзья, мы <br> ждём Вас
-                </p>
-            </div>
-            <div class="calendar_image">
-                <img class="calendar_img" src="img/calendar.png" alt="Calendar">
-            </div>
-        </div>
-        
-        <div class="mobile_confirmation">
-            <a class="confirmation_a" href="https://vk.ru/id.neburak.boss">Подтвердить присутствие</a>
-        </div>
+        <dt>Продолжительность</dt>
+        <dd>90 минут</dd>
 
-        <div class="wedding">
-            <div class="wedding_title">
-                Церемония <br> бракосочетания
-            </div>
-            <div class="wedding_title_image">
-                <img class='wedding_title_img' src="img/rings.jpg" alt="">
-            </div>
-            <div class="wedding_main_image">
-                <img class="wedding_main_img" src="img/XXL_height.webp" alt="">
-            </div>
-            <div class="wedding_container">
-                <div class="wedding_text">
-                <p class="wedding_text_title">
-                    <b>ЗАГС Октябрьского района г. Красноярск</b>
-                </p>
-                <div class="wedding_subtext">
-                    <p class="wedding_subtext_p">
-                        Церемония бракосочетания будет проходить
-                        в ЗАГСе Октябрьского района г. Красноярск
-                    </p>
-                    <a class="wedding_a" href="https://2gis.ru/krasnoyarsk/firm/985690699494390?m=92.773629%2C56.026563%2F16">
-                        Как добраться
-                    </a>
-                </div>
-                <p class="wedding_start">Начало - 15:30</p>
-            </div>
-            </div>
-        </div>
-        
-        <div class="mobile_wedding">
-            <a class="wedding_a" href="https://2gis.ru/krasnoyarsk/firm/985690699494390?m=92.773629%2C56.026563%2F16">
-                 Как добраться
-            </a>
-        </div>
+        <dt>Формат</dt>
+        <dd>Проблемная лекция с элементами кейс-метода, визуализации, мини-квиза и работы в парах</dd>
 
-        <div class="evening">
-            <div class="evening_plan_map">
-                <img class="plan_img" src="img/plan.png" alt="">
-                <a class="map_link" href="https://2gis.ru/krasnoyarsk/firm/70000001105213145?m=92.867689%2C56.060361%2F13">
-                    <img class="map" src="img/2gis_card.png" alt="">
-                </a>
-            </div>
-            <div class="evening_div_p">
-                <p class="evening_p">
-                    Но как мы все знаем, это официальное завершение. Фактическое завершение - пока все не отпляшут до стирания ног!
-                    Дорогие наши, у нас после банкета на втором этаже размещение на 31 человек, мы позаботились, чтобы Вы в уставшем
-                    состоянии могли сразу после банкета подняться повыше и лечь спать, чтобы на следующий день спокойно поехать по домам.
-                    Поэтому продумали, чтобы многие могли добраться на своих машинах. Парковка большая!
-                </p>
-            </div>
-        </div>
+        <dt>Ведущая идея</dt>
+        <dd>Несъемная конструкция — это не «изделие», а результат последовательного решения цепочки задач: клиническая ситуация → выбор конструкции → материал → лабораторный этап → контроль качества</dd>
+      </dl>
 
-        <div class="dress_code">
-            <div class="dress_code_title">Дресс-код</div>
-            <div class="mobile_dress_code">
-                <img class="mobile_dress_code_img" src="img/mobile_dress_code.png" alt="">
-            </div>
-            <div class="dress_code_container">
-                <img class="dress_code_img" src="img/flower_1.jpg" alt="">
-                <p class="dress_code_text">
-                    На нашей свадьбе не будет определенного дресс-кода,<br>
-                    приходите в комфортной для Вас одежде!<br>
-                    Но просим дорогих дам воздержаться от белого цвета.
-                </p>
-                <img class="dress_code_img" src="img/flower_1.jpg" alt="">
-            </div>
-        </div>
+      <h3>Цель лекции</h3>
+      <p>Сформировать у студентов целостное представление о несъемном протезировании и показать связь зуботехнических этапов с клинической задачей, материалами и критериями качества.</p>
 
-        <div class="gifts">
-            <div class="gifts_title">Информация о подарках</div>
-            <div class="gifts_text">
-                <span>"</span>Лучшая поддержка для нас -<span>"</span><br>
-                Ваши искренние пожелания и<br>
-                лучезарные улыбки, остальное<br>
-                можно поместить в конверт.
-            </div>
-            <div class="gifts_image">
-                <img class="gift_img_1" src="img/gift_2.png" alt="">
-                <img class="gift_img_2" src="img/gift.png" alt="">
-            </div>
-        </div>
+      <h3>Планируемые результаты — студент сможет:</h3>
+      <ul>
+        <li>классифицировать несъемные конструкции и объяснять показания к их применению;</li>
+        <li>сравнивать материалы и выбирать оптимальный вариант под учебный кейс;</li>
+        <li>выстраивать последовательность клинико-лабораторных этапов;</li>
+        <li>находить типичные ошибки на лабораторном этапе;</li>
+        <li>объяснять роль цифрового протокола и контроля качества.</li>
+      </ul>
+    </section>
 
-        <div class="confirmation">
-            <div class="confirmation_title">Подтверждение</div>
-            <div class="confirmation_text">
-                Главное для нас - Ваше присутствие!<br>
-                Просим Вас ответить на это приглашение в личные<br>
-                сообщения будете ли Вы присутствовать на нашем вечере.
-            </div>
-            <div class="confirmation_subtext">
-                P.S.<br>
-                На регистрации не обязательно быть всем.<br>
-                По желанию!
-            </div>
-            <a class="confirmation_a" href="https://vk.ru/id.neburak.boss">Подтвердить</a>
-            <div class="confirmation_date">11 / 07 / 2026</div>
-        </div>
+    <!-- ===== 2. Структура и содержание ===== -->
+    <section>
+      <h2>2. Структура и содержание лекции</h2>
 
-        <div class="end">
-            <div class="mobile_end_photo">
-                <img class="mobile_end_photo_img" src="img/mobile_end_photo.png" alt="">
-            </div>
-            <div class="end_box">
-                <span class="end_box_text">До скорой встречи! С любовью,</span><br>
-                <span class="end_box_title">
-                    ДАРЬЯ <br> <span>&</span> АНТОН
-                </span>
-            </div>
-        </div>
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Время</th>
+              <th>Этап</th>
+              <th>Содержание</th>
+              <th>Инструменты и методы управления мотивацией</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="time" data-label="Время"><span class="time-badge">5 мин</span></td>
+              <td class="stage" data-label="Этап">Вход в тему</td>
+              <td class="content" data-label="Содержание">Приветствие. Проблемный вопрос: «Почему при одинаковом дефекте зубного ряда можно предложить разные несъемные конструкции?»</td>
+              <td class="tools" data-label="Инструменты и методы"><span class="tag">«Входной билет»</span><span class="tag">вопрос на карточках</span><span class="tag">профессиональный вызов</span></td>
+            </tr>
+            <tr>
+              <td class="time" data-label="Время"><span class="time-badge">5 мин</span></td>
+              <td class="stage" data-label="Этап">Кейс-старт</td>
+              <td class="content" data-label="Содержание">Учебная ситуация: пациент 35 лет, отсутствует один зуб, соседние зубы интактны; другой кейс — зуб разрушен на 70%. Вопрос: «Какие варианты несъемных конструкций возможны?»</td>
+              <td class="tools" data-label="Инструменты и методы"><span class="tag">кейс-метод</span><span class="tag">голосование A/B/C</span><span class="tag">опора на опыт</span></td>
+            </tr>
+            <tr>
+              <td class="time" data-label="Время"><span class="time-badge">5 мин</span></td>
+              <td class="stage" data-label="Этап">Целеполагание</td>
+              <td class="content" data-label="Содержание">Совместное формулирование результатов: что должны знать и уметь к концу лекции. Шкала уверенности «1–5».</td>
+              <td class="tools" data-label="Инструменты и методы"><span class="tag">«Карта ожиданий»</span><span class="tag">шкала самооценки</span><span class="tag">прозрачные критерии</span></td>
+            </tr>
+            <tr>
+              <td class="time" data-label="Время"><span class="time-badge">10 мин</span></td>
+              <td class="stage" data-label="Этап">Понятие и классификация</td>
+              <td class="content" data-label="Содержание">Несъемное протезирование: определение, место среди ортопедических конструкций. Классификация: вкладки, полукоронки, искусственные коронки, штифтовые зубы, культевые вкладки, мостовидные протезы. Показания и ограничения.</td>
+22:25
+<td class="tools" data-label="Инструменты и методы"><span class="tag">структурно-логическая схема</span><span class="tag">мозговой штурм</span></td>
+            </tr>
+            <tr>
+              <td class="time" data-label="Время"><span class="time-badge">15 мин</span></td>
+              <td class="stage" data-label="Этап">Материалы и конструкции</td>
+              <td class="content" data-label="Содержание">Металлокерамика, цельнокерамические конструкции, диоксид циркония, композитные материалы. Свойства, эстетика, прочность, показания. Сравнительная таблица.</td>
+              <td class="tools" data-label="Инструменты и методы"><span class="tag">мини-квиз</span><span class="tag">«выбери материал под кейс»</span><span class="tag">демонстрация образцов</span></td>
+            </tr>
+            <tr>
+              <td class="time" data-label="Время"><span class="time-badge">20 мин</span></td>
+              <td class="stage" data-label="Этап">Клинико-лабораторные этапы</td>
+              <td class="content" data-label="Содержание">Логика протокола: анализ модели → моделирование → изготовление каркаса → облицовка → обработка → контроль. Особенности для коронки, вкладки, мостовидного протеза. Типичные ошибки: недопрепарирование, искажение окклюзии, неправильный выбор материала, дефекты припекания.</td>
+              <td class="tools" data-label="Инструменты и методы"><span class="tag">сортировка этапов</span><span class="tag">работа в парах</span><span class="tag">«найди ошибку»</span><span class="tag">чек-лист качества</span></td>
+            </tr>
+            <tr>
+              <td class="time" data-label="Время"><span class="time-badge">15 мин</span></td>
+              <td class="stage" data-label="Этап">Разбор конструкций по кейсам</td>
+              <td class="content" data-label="Содержание">Группы получают 2–3 учебных кейса: дефект коронки, отсутствие зуба, разрушение зуба ниже уровня десны. Задача — предложить конструкцию и обосновать.</td>
+              <td class="tools" data-label="Инструменты и методы"><span class="tag">ролевая игра «консилиум»</span><span class="tag">кейс-метод</span><span class="tag">соревнование групп</span></td>
+            </tr>
+            <tr>
+              <td class="time" data-label="Время"><span class="time-badge">10 мин</span></td>
+              <td class="stage" data-label="Этап">Цифровой протокол и контроль качества</td>
+              <td class="content" data-label="Содержание">CAD/CAM: сканирование, моделирование, фрезерование/3D-печать. Роль зубного техника. Критерии качества: точность посадки, окклюзионные контакты, эстетика, краевое прилегание.</td>
+              <td class="tools" data-label="Инструменты и методы"><span class="tag">визуализация кейса</span><span class="tag">«до/после»</span><span class="tag">вопрос-провокация</span></td>
+            </tr>
+            <tr>
+              <td class="time" data-label="Время"><span class="time-badge">5 мин</span></td>
+              <td class="stage" data-label="Этап">Закрепление</td>
+              <td class="content" data-label="Содержание">Итоговый мини-квиз из 5 вопросов. Разбор одного кейса фронтально.</td>
+              <td class="tools" data-label="Инструменты и методы"><span class="tag">квиз с обратной связью</span><span class="tag">«светофор»</span></td>
+            </tr>
+            <tr>
+              <td class="time" data-label="Время"><span class="time-badge">5 мин</span></td>
+              <td class="stage" data-label="Этап">Рефлексия и домашнее задание</td>
+              <td class="content" data-label="Содержание">«Одна идея, один вопрос, одна трудность». Повторная шкала уверенности. Домашнее задание на выбор.</td>
+              <td class="tools" data-label="Инструменты и методы"><span class="tag">рефлексивный круг</span><span class="tag">формирующее оценивание</span><span class="tag">вариативное ДЗ</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+22:25
+<!-- ===== 3. Содержательные блоки ===== -->
+    <section>
+      <h2>3. Содержательные блоки лекции</h2>
 
-        <div class="footer">
-            Made by Alexey Sidorenko<br>
-            2026
-        </div>
+      <ol class="content-blocks">
+        <li>
+          <strong>Введение в несъемное протезирование.</strong>
+          Место несъемных конструкций в ортопедической стоматологии. Отличие от съемных. Основные задачи: восстановление анатомической формы, функции, эстетики.
+        </li>
+        <li>
+          <strong>Классификация несъемных конструкций.</strong>
+          Вкладки, полукоронки, коронки, штифтовые зубы, культевые вкладки, мостовидные протезы. Показания и противопоказания в учебном формате.
+        </li>
+        <li>
+          <strong>Материаловедческий блок.</strong>
+          Металлы, металлокерамика, цельная керамика, диоксид циркония, композиты. Критерии выбора: прочность, эстетика, биосовместимость, технологичность.
+        </li>
+        <li>
+          <strong>Клинико-лабораторные этапы.</strong>
+          Последовательность изготовления несъемной конструкции. Роль зубного техника. Контроль окклюзии, краевого прилегания, эстетических параметров.
+        </li>
+        <li>
+          <strong>Типичные ошибки и контроль качества.</strong>
+          Ошибки моделирования, изготовления каркаса, облицовки, обработки. Чек-лист качества зуботехнического изделия.
+        </li>
+        <li>
+          <strong>Цифровые технологии.</strong>
+          CAD/CAM, внутриротовое сканирование, 3D-печать, фрезерование. Преимущества и ограничения цифрового протокола.
+        </li>
+      </ol>
+    </section>
 
-        
-    </div>
-    
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="js/script.js" ></script>
-    
+    <!-- ===== 4. Банк инструментов ===== -->
+    <section>
+      <h2>4. Банк инструментов и методов управления учебной мотивацией</h2>
+
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Группа методов</th>
+              <th>Конкретные инструменты</th>
+              <th>Для чего используется</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td data-label="Группа методов"><strong>Профессиональный контекст</strong></td>
+              <td data-label="Конкретные инструменты">Кейсы из практики, вопросы «как это будет в лаборатории», связь с реальными пациентами</td>
+              <td data-label="Для чего используется">Показывает значимость темы для будущей профессии</td>
+            </tr>
+            <tr>
+              <td data-label="Группа методов"><strong>Проблемное обучение</strong></td>
+              <td data-label="Конкретные инструменты">Проблемные вопросы, «найди ошибку», противоречивые кейсы</td>
+              <td data-label="Для чего используется">Создаёт познавательный вызов, активирует мышление</td>
+            </tr>
+            <tr>
+              <td data-label="Группа методов"><strong>Визуализация</strong></td>
+              <td data-label="Конкретные инструменты">Образцы конструкций, фото «до/после», схемы этапов, цифровой кейс</td>
+              <td data-label="Для чего используется">Снижает абстрактность, повышает интерес</td>
+            </tr>
+            <tr>
+              <td data-label="Группа методов"><strong>Геймификация</strong></td>
+              <td data-label="Конкретные инструменты">Мини-квиз, голосование, сортировка карточек, соревнование мини-групп</td>
+              <td data-label="Для чего используется">Даёт быструю обратную связь и элемент азарта</td>
+            </tr>
+            <tr>
+              <td data-label="Группа методов"><strong>Работа в парах/группах</strong></td>
+              <td data-label="Конкретные инструменты">«Консилиум», взаимопроверка, обсуждение кейса</td>
+              <td data-label="Для чего используется">Формирует коммуникацию и профессиональное мышление</td>
+            </tr>
+            <tr>
+              <td data-label="Группа методов"><strong>Ролевые элементы</strong></td>
+              <td data-label="Конкретные инструменты">Роли «врач — техник — пациент»</td>
+              <td data-label="Для чего используется">Помогает понять межпрофессиональное взаимодействие</td>
+22:25
+</tr>
+            <tr>
+              <td data-label="Группа методов"><strong>Формирующее оценивание</strong></td>
+              <td data-label="Конкретные инструменты">Шкала уверенности, «светофор», чек-лист</td>
+              <td data-label="Для чего используется">Снижает страх ошибки, делает обучение управляемым</td>
+            </tr>
+            <tr>
+              <td data-label="Группа методов"><strong>Автономия и выбор</strong></td>
+              <td data-label="Конкретные инструменты">Домашнее задание на выбор, выбор кейса для разбора</td>
+              <td data-label="Для чего используется">Повышает ответственность и внутреннюю мотивацию</td>
+            </tr>
+            <tr>
+              <td data-label="Группа методов"><strong>Рефлексия</strong></td>
+              <td data-label="Конкретные инструменты">«Одна идея, один вопрос, одна трудность»</td>
+              <td data-label="Для чего используется">Закрепляет учебный опыт и показывает прогресс</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ===== 5. Домашнее задание ===== -->
+    <section>
+      <h2>5. Домашнее задание на выбор</h2>
+
+      <div class="hw-grid">
+        <div class="hw-card">
+          <div class="hw-num">1</div>
+          <p>Составить сравнительную таблицу «металлокерамика / цельная керамика / диоксид циркония» по критериям: прочность, эстетика, показания, ограничения.</p>
+        </div>
+        <div class="hw-card">
+          <div class="hw-num">2</div>
+          <p>Описать по шагам лабораторный протокол изготовления металлокерамической коронки.</p>
+        </div>
+        <div class="hw-card">
+          <div class="hw-num">3</div>
+          <p>Разобрать учебный кейс: предложить несъемную конструкцию и обосновать выбор материала.</p>
+        </div>
+        <div class="hw-card">
+          <div class="hw-num">4</div>
+          <p>Найти 3 типичные ошибки на лабораторном этапе и предложить способы их профилактики.</p>
+        </div>
+      </div>
+
+      <div class="callout">
+        <strong>Итог:</strong> такая структура даёт не только содержательный каркас лекции, но и встроенную систему управления мотивацией — от проблемного старта и профессиональных кейсов до быстрой обратной связи, выбора и рефлексии.
+      </div>
+    </section>
+
+  </div>
 </body>
 </html>
